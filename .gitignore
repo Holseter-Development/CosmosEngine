@@ -1,4 +1,6 @@
-/assets
+/assets/models
+/assets/textures
+/assets/cubemaps
 /build
 /vendor
 /.vscode
