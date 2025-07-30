@@ -1,10 +1,12 @@
 #include "InputManager.h"
+#include <glad/glad.h>
 
 // Initialize static variables
 Camera* InputManager::s_Camera = nullptr;
 float InputManager::s_LastX = 0.0f;
 float InputManager::s_LastY = 0.0f;
 bool InputManager::s_FirstMouse = true;
+bool InputManager::s_Wireframe = false;
 
 void InputManager::Init(GLFWwindow* window) {
     // Set the static member variables for screen dimensions
@@ -35,7 +37,10 @@ void InputManager::SetCamera(Camera* camera) {
 
 // --- GLFW Callbacks ---
 void InputManager::key_callback(GLFWwindow* window, int key, int scancode, int action, int mods) {
-    // Here you could handle single-press key events in the future
+    if (key == GLFW_KEY_F1 && action == GLFW_PRESS) {
+        s_Wireframe = !s_Wireframe;
+        glPolygonMode(GL_FRONT_AND_BACK, s_Wireframe ? GL_LINE : GL_FILL);
+    }
 }
 
 void InputManager::mouse_callback(GLFWwindow* window, double xpos, double ypos) {
