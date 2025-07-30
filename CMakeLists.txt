@@ -37,7 +37,7 @@ add_executable(Lander
     src/engine/graphics/TextureLoader.cpp
     src/engine/graphics/Mesh.cpp
     src/engine/graphics/Model.cpp
-    src/engine/graphics/Sphere.cpp # <-- Added the new Sphere class
+    src/engine/graphics/Sphere.cpp
 )
 
 # --- Linking and Includes ---
