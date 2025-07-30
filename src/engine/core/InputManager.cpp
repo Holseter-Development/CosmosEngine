@@ -2,6 +2,7 @@
 #include <glad/glad.h>
 #include "../ui/UIManager.h"
 
+
 // Initialize static variables
 Camera* InputManager::s_Camera = nullptr;
 float InputManager::s_LastX = 0.0f;
@@ -54,9 +55,11 @@ void InputManager::key_callback(GLFWwindow* window, int key, int scancode, int a
         s_Wireframe = !s_Wireframe;
         glPolygonMode(GL_FRONT_AND_BACK, s_Wireframe ? GL_LINE : GL_FILL);
     }
+
     if (key == GLFW_KEY_F2 && action == GLFW_PRESS && s_UIManager) {
         s_UIManager->TogglePower();
     }
+
 }
 
 void InputManager::mouse_callback(GLFWwindow* window, double xpos, double ypos) {

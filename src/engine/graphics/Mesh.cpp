@@ -35,18 +35,18 @@ void Mesh::setupMesh() {
 }
 
 void Mesh::Draw(Shader &shader) {
-    unsigned int diffuseNr = 1;
+    // This loop binds each texture to a texture unit and sets the corresponding uniform in the shader.
     for(unsigned int i = 0; i < textures.size(); i++) {
         glActiveTexture(GL_TEXTURE0 + i); // Activate proper texture unit before binding
-        // Retrieve texture number (the N in diffuse_textureN)
-        std::string number;
-        std::string name = textures[i].type;
-        if(name == "texture_diffuse")
-            number = std::to_string(diffuseNr++);
         
-        // Now set the sampler to the correct texture unit
-        shader.setInt((name + number).c_str(), i);
-        // And finally bind the texture
+        // --- FIX ---
+        // The logic for naming the uniform is simplified.
+        // We now use the texture's 'type' directly (e.g., "texture_diffuse")
+        // This removes the fragile number-appending logic and matches the updated shader.
+        std::string name = textures[i].type;
+        shader.setInt(name, i);
+        
+        // Bind the texture
         glBindTexture(GL_TEXTURE_2D, textures[i].id);
     }
     

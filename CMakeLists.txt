@@ -39,7 +39,7 @@ add_executable(Lander
     src/engine/graphics/TextureLoader.cpp
     src/engine/graphics/Mesh.cpp
     src/engine/graphics/Model.cpp
-    src/engine/graphics/Sphere.cpp # <-- Added the new Sphere class
+    src/engine/graphics/Sphere.cpp
     src/engine/ui/TextRenderer.cpp
     src/engine/ui/UIManager.cpp
     src/game/CommandModule.cpp

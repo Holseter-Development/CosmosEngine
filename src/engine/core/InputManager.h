@@ -33,6 +33,7 @@ private:
     static bool s_Wireframe;
     // Pointer to UI manager for UI interactions
     static UIManager* s_UIManager;
+
 };
 
 #endif
