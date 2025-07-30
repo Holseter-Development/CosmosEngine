@@ -4,6 +4,8 @@ cmake_minimum_required(VERSION 3.10)
 # Define the project name
 project(LanderProject)
 
+find_package(Freetype REQUIRED)
+
 # Set the C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -38,15 +40,19 @@ add_executable(Lander
     src/engine/graphics/Mesh.cpp
     src/engine/graphics/Model.cpp
     src/engine/graphics/Sphere.cpp
+    src/engine/ui/TextRenderer.cpp
+    src/engine/ui/UIManager.cpp
+    src/game/CommandModule.cpp
 )
 
 # --- Linking and Includes ---
 target_include_directories(Lander PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/vendor
+    ${FREETYPE_INCLUDE_DIRS}
 )
 
 # Link all the necessary libraries
-target_link_libraries(Lander PRIVATE glad_lib glfw_lib opengl32 assimp_lib)
+target_link_libraries(Lander PRIVATE glad_lib glfw_lib opengl32 assimp_lib Freetype::Freetype)
 
 # --- Linker options for hiding console ---
 if(MSVC)

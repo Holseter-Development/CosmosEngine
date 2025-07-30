@@ -1,5 +1,7 @@
 #include "InputManager.h"
 #include <glad/glad.h>
+#include "../ui/UIManager.h"
+
 
 // Initialize static variables
 Camera* InputManager::s_Camera = nullptr;
@@ -7,6 +9,7 @@ float InputManager::s_LastX = 0.0f;
 float InputManager::s_LastY = 0.0f;
 bool InputManager::s_FirstMouse = true;
 bool InputManager::s_Wireframe = false;
+UIManager* InputManager::s_UIManager = nullptr;
 
 void InputManager::Init(GLFWwindow* window) {
     // Set the static member variables for screen dimensions
@@ -29,10 +32,21 @@ void InputManager::ProcessInput(GLFWwindow* window) {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
         glfwSetWindowShouldClose(window, true);
     }
+
+    if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS && s_UIManager) {
+        int width, height;
+        glfwGetFramebufferSize(window, &width, &height);
+        float uiY = static_cast<float>(height) - s_LastY;
+        s_UIManager->HandleClick(s_LastX, uiY);
+    }
 }
 
 void InputManager::SetCamera(Camera* camera) {
     s_Camera = camera;
+}
+
+void InputManager::SetUIManager(UIManager* manager) {
+    s_UIManager = manager;
 }
 
 // --- GLFW Callbacks ---
@@ -41,6 +55,11 @@ void InputManager::key_callback(GLFWwindow* window, int key, int scancode, int a
         s_Wireframe = !s_Wireframe;
         glPolygonMode(GL_FRONT_AND_BACK, s_Wireframe ? GL_LINE : GL_FILL);
     }
+
+    if (key == GLFW_KEY_F2 && action == GLFW_PRESS && s_UIManager) {
+        s_UIManager->TogglePower();
+    }
+
 }
 
 void InputManager::mouse_callback(GLFWwindow* window, double xpos, double ypos) {
