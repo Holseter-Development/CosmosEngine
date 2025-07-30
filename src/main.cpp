@@ -17,6 +17,8 @@
 #include "engine/graphics/TextureLoader.h"
 #include "engine/graphics/Model.h"
 #include "engine/graphics/Sphere.h" // Include our new Sphere class
+#include "engine/ui/UIManager.h"
+#include "game/CommandModule.h"
 
 // --- Initial Window Dimensions ---
 unsigned int screenWidth = 1600;
@@ -42,6 +44,11 @@ int main() {
     Camera camera(glm::vec3(0.0f, 0.0f, 0.0f), 5.0f);
     InputManager::Init(window);
     InputManager::SetCamera(&camera);
+
+    CommandModule commandModule;
+    UIManager uiManager;
+    uiManager.Init(screenWidth, screenHeight, &commandModule);
+    InputManager::SetUIManager(&uiManager);
 
     glEnable(GL_MULTISAMPLE);
     glEnable(GL_DEPTH_TEST);
@@ -141,6 +148,9 @@ int main() {
         glDrawArrays(GL_TRIANGLES, 0, 36);
         glBindVertexArray(0);
         glDepthFunc(GL_LESS);
+
+        // --- Render UI ---
+        uiManager.Render();
 
         glfwSwapBuffers(window);
         glfwPollEvents();

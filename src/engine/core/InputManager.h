@@ -4,6 +4,8 @@
 #include <GLFW/glfw3.h>
 #include "../graphics/Camera.h"
 
+class UIManager;
+
 // A static class to handle all input
 class InputManager {
 public:
@@ -13,6 +15,7 @@ public:
     static void ProcessInput(GLFWwindow* window);
     // Connects the InputManager to the camera it should control
     static void SetCamera(Camera* camera);
+    static void SetUIManager(UIManager* manager);
 
 private:
     // GLFW callback functions
@@ -26,6 +29,10 @@ private:
     static float s_LastX;
     static float s_LastY;
     static bool s_FirstMouse;
+    // Tracks the current polygon mode
+    static bool s_Wireframe;
+    // Pointer to UI manager for UI interactions
+    static UIManager* s_UIManager;
 };
 
 #endif
