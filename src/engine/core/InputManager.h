@@ -26,6 +26,8 @@ private:
     static float s_LastX;
     static float s_LastY;
     static bool s_FirstMouse;
+    // Tracks the current polygon mode
+    static bool s_Wireframe;
 };
 
 #endif
