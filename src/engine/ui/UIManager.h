@@ -1,33 +1,67 @@
+// src/engine/ui/UIManager.h
 #ifndef UI_MANAGER_H
 #define UI_MANAGER_H
 
 #include <vector>
 #include <functional>
+#include <string>
 #include "TextRenderer.h"
+#include "../graphics/Camera.h"
 
-class UIButton {
-public:
-    std::string Label;
-    float X, Y, Width, Height;
-    std::function<void()> OnClick;
-
-    void Draw(TextRenderer& renderer) const;
-    bool Contains(float x, float y) const;
+// --- UI Components ---
+struct UIButton {
+    std::string label;
+    float x, y, width, height;
+    std::function<void()> onClick;
+    bool isHovered = false;
 };
 
+struct UILabel {
+    std::string text;
+    float x, y;
+    float scale = 1.0f;
+    glm::vec3 color = glm::vec3(0.8f, 0.85f, 0.9f);
+    bool isDynamic = false;
+    std::function<std::string()> updateFunc;
+};
+
+// FIX: Forward-declare CommandModule to resolve the identifier error
 class CommandModule;
 
 class UIManager {
 public:
     UIManager();
-    bool Init(unsigned int screenWidth, unsigned int screenHeight, CommandModule* cmdModule);
+    ~UIManager();
+
+    void Init(unsigned int screenWidth, unsigned int screenHeight, CommandModule* cmdModule);
+    void Update(const Camera& camera); 
     void Render();
+    
+    // Input Handlers
     void HandleClick(float x, float y);
-    void TogglePower();
+    void HandleMouseMove(float x, float y);
+    void OnWindowResize(unsigned int newWidth, unsigned int newHeight);
+
 private:
-    TextRenderer m_TextRenderer;
+    // UI Rendering
+    void RenderPanel(float x, float y, float width, float height, const glm::vec4& color);
+    void AddButton(std::string label, float x, float y, float width, float height, std::function<void()> onClick);
+    void AddLabel(std::string text, float x, float y, bool isDynamic = false, std::function<std::string()> updateFunc = nullptr);
+    
+    // State
+    TextRenderer* m_TextRenderer;
+    CommandModule* m_CommandModule; // This is now correctly recognized
+    unsigned int m_ScreenWidth;
+    unsigned int m_ScreenHeight;
+    
+    // UI Elements
     std::vector<UIButton> m_Buttons;
-    CommandModule* m_CommandModule;
+    std::vector<UILabel> m_Labels;
+
+    // Theming
+    glm::vec4 m_PanelColor;
+    glm::vec3 m_TextColor;
+    glm::vec3 m_HighlightColor;
 };
 
 #endif

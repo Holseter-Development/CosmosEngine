@@ -1,6 +1,8 @@
+// src/engine/core/InputManager.h
 #ifndef INPUT_MANAGER_H
 #define INPUT_MANAGER_H
 
+#include <glad/glad.h> 
 #include <GLFW/glfw3.h>
 #include "../graphics/Camera.h"
 
@@ -21,6 +23,7 @@ private:
     // GLFW callback functions
     static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
     static void mouse_callback(GLFWwindow* window, double xpos, double ypos);
+    static void mouse_button_callback(GLFWwindow* window, int button, int action, int mods); // ADDED
     static void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 
     // Pointer to the scene's camera
@@ -33,7 +36,8 @@ private:
     static bool s_Wireframe;
     // Pointer to UI manager for UI interactions
     static UIManager* s_UIManager;
-
+    // Tracks camera rotation state
+    static bool s_IsRotating; // ADDED
 };
 
 #endif

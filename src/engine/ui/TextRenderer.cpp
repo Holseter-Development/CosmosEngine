@@ -1,60 +1,66 @@
+// src/engine/ui/TextRenderer.cpp
 #include "TextRenderer.h"
+#include <iostream>
 #include <ft2build.h>
+#include <glm/gtc/matrix_transform.hpp>
 #include FT_FREETYPE_H
 
-#include <glad/glad.h>
-#include <glm/gtc/matrix_transform.hpp>
-#include <iostream>
+TextRenderer::TextRenderer(unsigned int screenWidth, unsigned int screenHeight)
+    : TextShader("assets/shaders/text.vert", "assets/shaders/text.frag") {
+    
+    UpdateProjection(screenWidth, screenHeight);
 
-TextRenderer::TextRenderer() : VAO(0), VBO(0), m_Shader(nullptr) {}
-
-TextRenderer::~TextRenderer() {
-    if (VAO) glDeleteVertexArrays(1, &VAO);
-    if (VBO) glDeleteBuffers(1, &VBO);
-    delete m_Shader;
+    glGenVertexArrays(1, &VAO);
+    glGenBuffers(1, &VBO);
+    glBindVertexArray(VAO);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 6 * 4, NULL, GL_DYNAMIC_DRAW);
+    glEnableVertexAttribArray(0);
+    glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 4 * sizeof(float), 0);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindVertexArray(0);
 }
 
-bool TextRenderer::Init(const char* fontPath, unsigned int fontSize, unsigned int screenWidth, unsigned int screenHeight) {
+TextRenderer::~TextRenderer() {
+    glDeleteVertexArrays(1, &VAO);
+    glDeleteBuffers(1, &VBO);
+}
+
+void TextRenderer::UpdateProjection(unsigned int screenWidth, unsigned int screenHeight) {
+    glm::mat4 projection = glm::ortho(0.0f, static_cast<float>(screenWidth), 0.0f, static_cast<float>(screenHeight));
+    TextShader.use();
+    TextShader.setMat4("projection", projection);
+}
+
+bool TextRenderer::Load(std::string font, unsigned int fontSize) {
+    Characters.clear();
     FT_Library ft;
     if (FT_Init_FreeType(&ft)) {
         std::cout << "ERROR::FREETYPE: Could not init FreeType Library" << std::endl;
         return false;
     }
-
     FT_Face face;
-    if (FT_New_Face(ft, fontPath, 0, &face)) {
+    if (FT_New_Face(ft, font.c_str(), 0, &face)) {
         std::cout << "ERROR::FREETYPE: Failed to load font" << std::endl;
         FT_Done_FreeType(ft);
         return false;
     }
     FT_Set_Pixel_Sizes(face, 0, fontSize);
-
-    glPixelStorei(GL_UNPACK_ALIGNMENT, 1); // Disable byte-alignment restriction
+    glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
 
     for (unsigned char c = 0; c < 128; c++) {
         if (FT_Load_Char(face, c, FT_LOAD_RENDER)) {
-            std::cout << "ERROR::FREETYTPE: Failed to load Glyph" << std::endl;
+            std::cout << "ERROR::FREETYTPE: Failed to load Glyph for character '" << c << "'" << std::endl;
             continue;
         }
         unsigned int texture;
         glGenTextures(1, &texture);
         glBindTexture(GL_TEXTURE_2D, texture);
-        glTexImage2D(
-            GL_TEXTURE_2D,
-            0,
-            GL_RED,
-            face->glyph->bitmap.width,
-            face->glyph->bitmap.rows,
-            0,
-            GL_RED,
-            GL_UNSIGNED_BYTE,
-            face->glyph->bitmap.buffer
-        );
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RED, face->glyph->bitmap.width, face->glyph->bitmap.rows, 0, GL_RED, GL_UNSIGNED_BYTE, face->glyph->bitmap.buffer);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
         Character character = {
             texture,
             glm::ivec2(face->glyph->bitmap.width, face->glyph->bitmap.rows),
@@ -66,56 +72,40 @@ bool TextRenderer::Init(const char* fontPath, unsigned int fontSize, unsigned in
     glBindTexture(GL_TEXTURE_2D, 0);
     FT_Done_Face(face);
     FT_Done_FreeType(ft);
-
-    // Shader setup
-    m_Shader = new Shader("assets/shaders/text.vert", "assets/shaders/text.frag");
-    m_Shader->use();
-    m_Projection = glm::ortho(0.0f, static_cast<float>(screenWidth), 0.0f, static_cast<float>(screenHeight));
-    m_Shader->setMat4("projection", m_Projection);
-
-    glGenVertexArrays(1, &VAO);
-    glGenBuffers(1, &VBO);
-    glBindVertexArray(VAO);
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 6 * 4, NULL, GL_DYNAMIC_DRAW);
-    glEnableVertexAttribArray(0);
-    glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 4 * sizeof(float), 0);
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
-    glBindVertexArray(0);
     return true;
 }
 
-void TextRenderer::RenderText(const std::string& text, float x, float y, float scale, glm::vec3 color) {
-    if (!m_Shader) return;
-    m_Shader->use();
-    m_Shader->setVec3("textColor", color);
+void TextRenderer::RenderText(std::string text, float x, float y, float scale, glm::vec3 color) {
+    TextShader.use();
+    TextShader.setVec3("textColor", color);
     glActiveTexture(GL_TEXTURE0);
     glBindVertexArray(VAO);
 
-    std::string::const_iterator c;
-    for (c = text.begin(); c != text.end(); c++) {
-        Character ch = Characters[*c];
-
+    for (char c : text) {
+        Character ch = Characters[c];
         float xpos = x + ch.Bearing.x * scale;
         float ypos = y - (ch.Size.y - ch.Bearing.y) * scale;
-
         float w = ch.Size.x * scale;
         float h = ch.Size.y * scale;
         float vertices[6][4] = {
-            { xpos,     ypos + h,   0.0f, 0.0f },
-            { xpos,     ypos,       0.0f, 1.0f },
-            { xpos + w, ypos,       1.0f, 1.0f },
-            { xpos,     ypos + h,   0.0f, 0.0f },
-            { xpos + w, ypos,       1.0f, 1.0f },
-            { xpos + w, ypos + h,   1.0f, 0.0f }
+            { xpos,     ypos + h,   0.0f, 0.0f }, { xpos,     ypos,       0.0f, 1.0f }, { xpos + w, ypos,       1.0f, 1.0f },
+            { xpos,     ypos + h,   0.0f, 0.0f }, { xpos + w, ypos,       1.0f, 1.0f }, { xpos + w, ypos + h,   1.0f, 0.0f }
         };
         glBindTexture(GL_TEXTURE_2D, ch.TextureID);
         glBindBuffer(GL_ARRAY_BUFFER, VBO);
         glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(vertices), vertices);
         glBindBuffer(GL_ARRAY_BUFFER, 0);
         glDrawArrays(GL_TRIANGLES, 0, 6);
-        x += (ch.Advance >> 6) * scale; // bitshift by 6 to get value in pixels
+        x += (ch.Advance >> 6) * scale;
     }
     glBindVertexArray(0);
     glBindTexture(GL_TEXTURE_2D, 0);
+}
+
+// FIX: Implementation for the new public method
+glm::ivec2 TextRenderer::GetCharacterSize(char character) {
+    if (Characters.count(character)) {
+        return Characters[character].Size;
+    }
+    return glm::ivec2(0, 0);
 }

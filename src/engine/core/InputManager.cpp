@@ -1,18 +1,18 @@
+// src/engine/core/InputManager.cpp
 #include "InputManager.h"
 #include <glad/glad.h>
 #include "../ui/UIManager.h"
 
-
 // Initialize static variables
 Camera* InputManager::s_Camera = nullptr;
+UIManager* InputManager::s_UIManager = nullptr;
 float InputManager::s_LastX = 0.0f;
 float InputManager::s_LastY = 0.0f;
 bool InputManager::s_FirstMouse = true;
 bool InputManager::s_Wireframe = false;
-UIManager* InputManager::s_UIManager = nullptr;
+bool InputManager::s_IsRotating = false; // ADDED
 
 void InputManager::Init(GLFWwindow* window) {
-    // Set the static member variables for screen dimensions
     int width, height;
     glfwGetWindowSize(window, &width, &height);
     s_LastX = (float)width / 2.0f;
@@ -21,24 +21,18 @@ void InputManager::Init(GLFWwindow* window) {
     // Set GLFW callbacks
     glfwSetKeyCallback(window, key_callback);
     glfwSetCursorPosCallback(window, mouse_callback);
+    glfwSetMouseButtonCallback(window, mouse_button_callback); // ADDED
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
-    // Tell GLFW to capture the mouse
-    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+    // FIX: Free the mouse cursor
+    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
 }
 
 void InputManager::ProcessInput(GLFWwindow* window) {
-    // Close the application if the ESC key is pressed
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
         glfwSetWindowShouldClose(window, true);
     }
-
-    if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS && s_UIManager) {
-        int width, height;
-        glfwGetFramebufferSize(window, &width, &height);
-        float uiY = static_cast<float>(height) - s_LastY;
-        s_UIManager->HandleClick(s_LastX, uiY);
-    }
+    // Per-frame input processing like continuous key presses can go here
 }
 
 void InputManager::SetCamera(Camera* camera) {
@@ -55,31 +49,55 @@ void InputManager::key_callback(GLFWwindow* window, int key, int scancode, int a
         s_Wireframe = !s_Wireframe;
         glPolygonMode(GL_FRONT_AND_BACK, s_Wireframe ? GL_LINE : GL_FILL);
     }
-
-    if (key == GLFW_KEY_F2 && action == GLFW_PRESS && s_UIManager) {
-        s_UIManager->TogglePower();
-    }
-
 }
 
 void InputManager::mouse_callback(GLFWwindow* window, double xpos, double ypos) {
+    float xpos_f = static_cast<float>(xpos);
+    float ypos_f = static_cast<float>(ypos);
+
     if (s_FirstMouse) {
-        s_LastX = xpos;
-        s_LastY = ypos;
+        s_LastX = xpos_f;
+        s_LastY = ypos_f;
         s_FirstMouse = false;
     }
 
-    float xoffset = xpos - s_LastX;
-    float yoffset = s_LastY - ypos; // reversed since y-coordinates go from bottom to top
+    float xoffset = xpos_f - s_LastX;
+    float yoffset = s_LastY - ypos_f; 
+    s_LastX = xpos_f;
+    s_LastY = ypos_f;
 
-    s_LastX = xpos;
-    s_LastY = ypos;
-
-    if (s_Camera) {
+    // FIX: Only rotate camera when right mouse button is held down
+    if (s_IsRotating && s_Camera) {
         s_Camera->ProcessMouseMovement(xoffset, yoffset);
+    }
+
+    // Pass mouse movement to UI manager for hover effects
+    if (s_UIManager) {
+        s_UIManager->HandleMouseMove(xpos_f, ypos_f);
+    }
+}
+
+// FIX: New callback to handle mouse clicks
+void InputManager::mouse_button_callback(GLFWwindow* window, int button, int action, int mods) {
+    // Handle camera rotation
+    if (button == GLFW_MOUSE_BUTTON_RIGHT) {
+        if (action == GLFW_PRESS) {
+            s_IsRotating = true;
+            s_FirstMouse = true; // Reset to avoid jumping
+        } else if (action == GLFW_RELEASE) {
+            s_IsRotating = false;
+        }
+    }
+
+    // Handle UI interaction
+    if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS && s_UIManager) {
+        s_UIManager->HandleClick(s_LastX, s_LastY);
     }
 }
 
 void InputManager::framebuffer_size_callback(GLFWwindow* window, int width, int height) {
     glViewport(0, 0, width, height);
+    if (s_UIManager) {
+        s_UIManager->OnWindowResize(width, height);
+    }
 }

@@ -1,0 +1,2252 @@
+Folder PATH listing for volume OS
+Volume serial number is 1CD2-C0F9
+C:.
+|   .gitattributes
+|   .gitignore
+|   CMakeLists.txt
+|   structure.txt
+|   
++---.vscode
+|       c_cpp_properties.json
+|       
++---assets
+|   +---cubemaps
+|   |   \---space
+|   |           nx.jpg
+|   |           ny.jpg
+|   |           nz.jpg
+|   |           px.jpg
+|   |           py.jpg
+|   |           pz.jpg
+|   |           
+|   +---fonts
+|   |       .gitkeep
+|   |       eurostile.TTF
+|   |       EuroStyleNormal.ttf
+|   |       
+|   +---models
+|   |   +---asteroid
+|   |   |   |   Asteroid_1a.fbx
+|   |   |   |   
+|   |   |   \---2K
+|   |   |           Asteroid1a_AORM_2K.png
+|   |   |           Asteroid1a_Color_2K.png
+|   |   |           Asteroid1a_Height_2K.png
+|   |   |           Asteroid1a_Metallic_2K.png
+|   |   |           Asteroid1a_Mixed_AO_2K.png
+|   |   |           Asteroid1a_Normal_2K.png
+|   |   |           Asteroid1a_Normal_DirectX_2K.png
+|   |   |           Asteroid1a_Normal_OpenGL_2K.png
+|   |   |           Asteroid1a_Roughness_2K.png
+|   |   |           
+|   |   +---bluemoon
+|   |   |   |   BlueMoonLander.fbx
+|   |   |   |   
+|   |   |   \---Textures
+|   |   |           T_Bottom_GEO_BaseColor.png
+|   |   |           T_Bottom_GEO_Normal.png
+|   |   |           T_Bottom_GEO_ORM.png
+|   |   |           T_CrewDoor_SHD_BaseColor.png
+|   |   |           T_CrewDoor_SHD_Normal.png
+|   |   |           T_CrewDoor_SHD_ORM.png
+|   |   |           T_CrewModule_WhiteMetal_SHD_BaseColor.png
+|   |   |           T_CrewModule_WhiteMetal_SHD_Normal.png
+|   |   |           T_CrewModule_WhiteMetal_SHD_ORM.png
+|   |   |           T_Crew_Instrumentation_SHD_BaseColor.png
+|   |   |           T_Crew_Instrumentation_SHD_Normal.png
+|   |   |           T_Crew_Instrumentation_SHD_ORM.png
+|   |   |           T_Engine_SHD_BaseColor.png
+|   |   |           T_Engine_SHD_Normal.png
+|   |   |           T_Engine_SHD_ORM.png
+|   |   |           T_FuelTank_SHD_BaseColor.png
+|   |   |           T_FuelTank_SHD_Normal.png
+|   |   |           T_FuelTank_SHD_ORM.png
+|   |   |           T_Gold_Foil_SHD_BaseColor.png
+|   |   |           T_Gold_Foil_SHD_Normal.png
+|   |   |           T_Gold_Foil_SHD_ORM.png
+|   |   |           T_Hatch_SHD_BaseColor.png
+|   |   |           T_Hatch_SHD_Normal.png
+|   |   |           T_Hatch_SHD_ORM.png
+|   |   |           T_Instrumentation_01_SHD_BaseColor.png
+|   |   |           T_Instrumentation_01_SHD_Normal.png
+|   |   |           T_Instrumentation_01_SHD_ORM.png
+|   |   |           T_Ladder_SHD_BaseColor.png
+|   |   |           T_Ladder_SHD_Normal.png
+|   |   |           T_Ladder_SHD_ORM.png
+|   |   |           T_PuffyWhiteTUbes_SHD_BaseColor.png
+|   |   |           T_PuffyWhiteTUbes_SHD_Normal.png
+|   |   |           T_PuffyWhiteTUbes_SHD_ORM.png
+|   |   |           T_RCS_Thrust_SHD_BaseColor.png
+|   |   |           T_RCS_Thrust_SHD_Normal.png
+|   |   |           T_RCS_Thrust_SHD_ORM.png
+|   |   |           T_SilverFoil_SHD_BaseColor.png
+|   |   |           T_SilverFoil_SHD_Normal.png
+|   |   |           T_SilverFoil_SHD_ORM.png
+|   |   |           T_SolarPanels_SHD_BaseColor.png
+|   |   |           T_SolarPanels_SHD_Normal.png
+|   |   |           T_SolarPanels_SHD_ORM.png
+|   |   |           T_WhitePanels_SHD_BaseColor.png
+|   |   |           T_WhitePanels_SHD_Normal.png
+|   |   |           T_WhitePanels_SHD_ORM.png
+|   |   |           T_WindowInterior_SHD_BaseColor.png
+|   |   |           T_WindowInterior_SHD_Normal.png
+|   |   |           T_WindowInterior_SHD_ORM.png
+|   |   |           T_Windows_SHD_BaseColor.png
+|   |   |           T_Windows_SHD_Normal.png
+|   |   |           T_Windows_SHD_ORM.png
+|   |   |           
+|   |   \---commandmodule
+|   |           ApolloLunarModule.glb
+|   |           
+|   +---shaders
+|   |       lighting.frag
+|   |       lighting.vert
+|   |       light_cube.frag
+|   |       skybox.frag
+|   |       skybox.vert
+|   |       sun.frag
+|   |       sun.vert
+|   |       text.frag
+|   |       text.vert
+|   |       
+|   \---textures
+|           earth.jpg
+|           sun.jpg
+|           
++---build
+|   |   ALL_BUILD.vcxproj
+|   |   ALL_BUILD.vcxproj.filters
+|   |   CMakeCache.txt
+|   |   cmake_install.cmake
+|   |   CPackConfig.cmake
+|   |   CPackSourceConfig.cmake
+|   |   glad_lib.vcxproj
+|   |   glad_lib.vcxproj.filters
+|   |   INSTALL.vcxproj
+|   |   INSTALL.vcxproj.filters
+|   |   Lander.vcxproj
+|   |   Lander.vcxproj.filters
+|   |   LanderProject.sln
+|   |   PACKAGE.vcxproj
+|   |   PACKAGE.vcxproj.filters
+|   |   ZERO_CHECK.vcxproj
+|   |   ZERO_CHECK.vcxproj.filters
+|   |   
+|   +---.cmake
+|   |   \---api
+|   |       \---v1
+|   |           +---query
+|   |           |   \---client-vscode
+|   |           |           query.json
+|   |           |           
+|   |           \---reply
+|   |                   cache-v2-d48846e34f246d30f976.json
+|   |                   cmakeFiles-v1-62df425e4cd7704585c6.json
+|   |                   codemodel-v2-17d8d37e03cf5eb7d4e3.json
+|   |                   directory-.-Debug-d0094a50bb2071803777.json
+|   |                   directory-.-MinSizeRel-d0094a50bb2071803777.json
+|   |                   directory-.-Release-d0094a50bb2071803777.json
+|   |                   directory-.-RelWithDebInfo-d0094a50bb2071803777.json
+|   |                   directory-vendor.freetype-Debug-e183b620e165cd711e2e.json
+|   |                   directory-vendor.freetype-MinSizeRel-c46c5fb4b39d392b405b.json
+|   |                   directory-vendor.freetype-Release-30fbf7510dec81f718e6.json
+|   |                   directory-vendor.freetype-RelWithDebInfo-770789da88760c2efd7b.json
+|   |                   index-2025-08-04T10-04-54-0878.json
+|   |                   target-ALL_BUILD-Debug-08bd00e296e8fc50a612.json
+|   |                   target-ALL_BUILD-Debug-29ce8984a422c61c0078.json
+|   |                   target-ALL_BUILD-MinSizeRel-08bd00e296e8fc50a612.json
+|   |                   target-ALL_BUILD-MinSizeRel-29ce8984a422c61c0078.json
+|   |                   target-ALL_BUILD-Release-08bd00e296e8fc50a612.json
+|   |                   target-ALL_BUILD-Release-29ce8984a422c61c0078.json
+|   |                   target-ALL_BUILD-RelWithDebInfo-08bd00e296e8fc50a612.json
+|   |                   target-ALL_BUILD-RelWithDebInfo-29ce8984a422c61c0078.json
+|   |                   target-freetype-Debug-de871bc0ee36232675d2.json
+|   |                   target-freetype-MinSizeRel-b686f3c3b0cef108b4ce.json
+|   |                   target-freetype-Release-bd6f1fe9c4e8f14b53eb.json
+|   |                   target-freetype-RelWithDebInfo-1567504a220f0b0089bd.json
+|   |                   target-glad_lib-Debug-b478ec21f6dd7f8e31aa.json
+|   |                   target-glad_lib-MinSizeRel-730859ec7151ea006d10.json
+|   |                   target-glad_lib-Release-27f818b78cc99d11e110.json
+|   |                   target-glad_lib-RelWithDebInfo-f02a7977ff76105a9da2.json
+|   |                   target-Lander-Debug-41b6b6dbf77938fa27f9.json
+|   |                   target-Lander-MinSizeRel-55641b7e78699e1ca937.json
+|   |                   target-Lander-Release-480b465fb6fd4f9a244d.json
+|   |                   target-Lander-RelWithDebInfo-ea6c8c6b548e099ce0f0.json
+|   |                   target-ZERO_CHECK-Debug-ab79bedb36768af8ae2b.json
+|   |                   target-ZERO_CHECK-MinSizeRel-ab79bedb36768af8ae2b.json
+|   |                   target-ZERO_CHECK-Release-ab79bedb36768af8ae2b.json
+|   |                   target-ZERO_CHECK-RelWithDebInfo-ab79bedb36768af8ae2b.json
+|   |                   toolchains-v1-6edb95882eb60b3f3805.json
+|   |                   
+|   +---CMakeFiles
+|   |   |   cmake.check_cache
+|   |   |   CMakeConfigureLog.yaml
+|   |   |   generate.stamp
+|   |   |   generate.stamp.depend
+|   |   |   generate.stamp.list
+|   |   |   TargetDirectories.txt
+|   |   |   
+|   |   +---3.31.6-msvc6
+|   |   |   |   CMakeCCompiler.cmake
+|   |   |   |   CMakeCXXCompiler.cmake
+|   |   |   |   CMakeDetermineCompilerABI_C.bin
+|   |   |   |   CMakeDetermineCompilerABI_CXX.bin
+|   |   |   |   CMakeRCCompiler.cmake
+|   |   |   |   CMakeSystem.cmake
+|   |   |   |   VCTargetsPath.txt
+|   |   |   |   VCTargetsPath.vcxproj
+|   |   |   |   
+|   |   |   +---CompilerIdC
+|   |   |   |   |   CMakeCCompilerId.c
+|   |   |   |   |   CompilerIdC.exe
+|   |   |   |   |   CompilerIdC.vcxproj
+|   |   |   |   |   
+|   |   |   |   +---Debug
+|   |   |   |   |   |   CMakeCCompilerId.obj
+|   |   |   |   |   |   CompilerIdC.exe.recipe
+|   |   |   |   |   |   
+|   |   |   |   |   \---CompilerIdC.tlog
+|   |   |   |   |           CL.command.1.tlog
+|   |   |   |   |           Cl.items.tlog
+|   |   |   |   |           CL.read.1.tlog
+|   |   |   |   |           CL.write.1.tlog
+|   |   |   |   |           CompilerIdC.lastbuildstate
+|   |   |   |   |           link.command.1.tlog
+|   |   |   |   |           link.read.1.tlog
+|   |   |   |   |           link.secondary.1.tlog
+|   |   |   |   |           link.write.1.tlog
+|   |   |   |   |           
+|   |   |   |   \---tmp
+|   |   |   +---CompilerIdCXX
+|   |   |   |   |   CMakeCXXCompilerId.cpp
+|   |   |   |   |   CompilerIdCXX.exe
+|   |   |   |   |   CompilerIdCXX.vcxproj
+|   |   |   |   |   
+|   |   |   |   +---Debug
+|   |   |   |   |   |   CMakeCXXCompilerId.obj
+|   |   |   |   |   |   CompilerIdCXX.exe.recipe
+|   |   |   |   |   |   
+|   |   |   |   |   \---CompilerIdCXX.tlog
+|   |   |   |   |           CL.command.1.tlog
+|   |   |   |   |           Cl.items.tlog
+|   |   |   |   |           CL.read.1.tlog
+|   |   |   |   |           CL.write.1.tlog
+|   |   |   |   |           CompilerIdCXX.lastbuildstate
+|   |   |   |   |           link.command.1.tlog
+|   |   |   |   |           link.read.1.tlog
+|   |   |   |   |           link.secondary.1.tlog
+|   |   |   |   |           link.write.1.tlog
+|   |   |   |   |           
+|   |   |   |   \---tmp
+|   |   |   +---VCTargetsPath
+|   |   |   |   \---x64
+|   |   |   |       \---Debug
+|   |   |   |           |   VCTargetsPath.recipe
+|   |   |   |           |   
+|   |   |   |           \---VCTargetsPath.tlog
+|   |   |   |                   VCTargetsPath.lastbuildstate
+|   |   |   |                   
+|   |   |   \---x64
+|   |   |       \---Debug
+|   |   +---950eda053eb6540eea4a6155edb18079
+|   |   |       INSTALL_force.rule
+|   |   |       PACKAGE_force.rule
+|   |   |       
+|   |   +---c44f0a6f1fc3b2c0e622ae8fa5ede7bd
+|   |   |       generate.stamp.rule
+|   |   |       INSTALL_force.rule
+|   |   |       PACKAGE_force.rule
+|   |   |       
+|   |   +---CMakeScratch
+|   |   \---pkgRedirects
+|   +---Debug
+|   |   |   assimp-vc143-mt.dll
+|   |   |   glad_lib.lib
+|   |   |   glad_lib.pdb
+|   |   |   Lander.exe
+|   |   |   Lander.pdb
+|   |   |   
+|   |   \---assets
+|   |       +---cubemaps
+|   |       |   \---space
+|   |       |           nx.jpg
+|   |       |           ny.jpg
+|   |       |           nz.jpg
+|   |       |           px.jpg
+|   |       |           py.jpg
+|   |       |           pz.jpg
+|   |       |           
+|   |       +---fonts
+|   |       |       .gitkeep
+|   |       |       eurostile.TTF
+|   |       |       EuroStyleNormal.ttf
+|   |       |       
+|   |       +---models
+|   |       |   +---asteroid
+|   |       |   |   |   Asteroid_1a.fbx
+|   |       |   |   |   
+|   |       |   |   \---2K
+|   |       |   |           Asteroid1a_AORM_2K.png
+|   |       |   |           Asteroid1a_Color_2K.png
+|   |       |   |           Asteroid1a_Height_2K.png
+|   |       |   |           Asteroid1a_Metallic_2K.png
+|   |       |   |           Asteroid1a_Mixed_AO_2K.png
+|   |       |   |           Asteroid1a_Normal_2K.png
+|   |       |   |           Asteroid1a_Normal_DirectX_2K.png
+|   |       |   |           Asteroid1a_Normal_OpenGL_2K.png
+|   |       |   |           Asteroid1a_Roughness_2K.png
+|   |       |   |           
+|   |       |   +---bluemoon
+|   |       |   |   |   BlueMoonLander.fbx
+|   |       |   |   |   
+|   |       |   |   \---Textures
+|   |       |   |           T_Bottom_GEO_BaseColor.png
+|   |       |   |           T_Bottom_GEO_Normal.png
+|   |       |   |           T_Bottom_GEO_ORM.png
+|   |       |   |           T_CrewDoor_SHD_BaseColor.png
+|   |       |   |           T_CrewDoor_SHD_Normal.png
+|   |       |   |           T_CrewDoor_SHD_ORM.png
+|   |       |   |           T_CrewModule_WhiteMetal_SHD_BaseColor.png
+|   |       |   |           T_CrewModule_WhiteMetal_SHD_Normal.png
+|   |       |   |           T_CrewModule_WhiteMetal_SHD_ORM.png
+|   |       |   |           T_Crew_Instrumentation_SHD_BaseColor.png
+|   |       |   |           T_Crew_Instrumentation_SHD_Normal.png
+|   |       |   |           T_Crew_Instrumentation_SHD_ORM.png
+|   |       |   |           T_Engine_SHD_BaseColor.png
+|   |       |   |           T_Engine_SHD_Normal.png
+|   |       |   |           T_Engine_SHD_ORM.png
+|   |       |   |           T_FuelTank_SHD_BaseColor.png
+|   |       |   |           T_FuelTank_SHD_Normal.png
+|   |       |   |           T_FuelTank_SHD_ORM.png
+|   |       |   |           T_Gold_Foil_SHD_BaseColor.png
+|   |       |   |           T_Gold_Foil_SHD_Normal.png
+|   |       |   |           T_Gold_Foil_SHD_ORM.png
+|   |       |   |           T_Hatch_SHD_BaseColor.png
+|   |       |   |           T_Hatch_SHD_Normal.png
+|   |       |   |           T_Hatch_SHD_ORM.png
+|   |       |   |           T_Instrumentation_01_SHD_BaseColor.png
+|   |       |   |           T_Instrumentation_01_SHD_Normal.png
+|   |       |   |           T_Instrumentation_01_SHD_ORM.png
+|   |       |   |           T_Ladder_SHD_BaseColor.png
+|   |       |   |           T_Ladder_SHD_Normal.png
+|   |       |   |           T_Ladder_SHD_ORM.png
+|   |       |   |           T_PuffyWhiteTUbes_SHD_BaseColor.png
+|   |       |   |           T_PuffyWhiteTUbes_SHD_Normal.png
+|   |       |   |           T_PuffyWhiteTUbes_SHD_ORM.png
+|   |       |   |           T_RCS_Thrust_SHD_BaseColor.png
+|   |       |   |           T_RCS_Thrust_SHD_Normal.png
+|   |       |   |           T_RCS_Thrust_SHD_ORM.png
+|   |       |   |           T_SilverFoil_SHD_BaseColor.png
+|   |       |   |           T_SilverFoil_SHD_Normal.png
+|   |       |   |           T_SilverFoil_SHD_ORM.png
+|   |       |   |           T_SolarPanels_SHD_BaseColor.png
+|   |       |   |           T_SolarPanels_SHD_Normal.png
+|   |       |   |           T_SolarPanels_SHD_ORM.png
+|   |       |   |           T_WhitePanels_SHD_BaseColor.png
+|   |       |   |           T_WhitePanels_SHD_Normal.png
+|   |       |   |           T_WhitePanels_SHD_ORM.png
+|   |       |   |           T_WindowInterior_SHD_BaseColor.png
+|   |       |   |           T_WindowInterior_SHD_Normal.png
+|   |       |   |           T_WindowInterior_SHD_ORM.png
+|   |       |   |           T_Windows_SHD_BaseColor.png
+|   |       |   |           T_Windows_SHD_Normal.png
+|   |       |   |           T_Windows_SHD_ORM.png
+|   |       |   |           
+|   |       |   \---commandmodule
+|   |       |           ApolloLunarModule.glb
+|   |       |           
+|   |       +---shaders
+|   |       |       lighting.frag
+|   |       |       lighting.vert
+|   |       |       light_cube.frag
+|   |       |       skybox.frag
+|   |       |       skybox.vert
+|   |       |       sun.frag
+|   |       |       sun.vert
+|   |       |       text.frag
+|   |       |       text.vert
+|   |       |       
+|   |       \---textures
+|   |               earth.jpg
+|   |               sun.jpg
+|   |               
+|   +---glad_lib.dir
+|   |   \---Debug
+|   |       |   glad.obj
+|   |       |   glad_lib.lib.recipe
+|   |       |   
+|   |       \---glad_lib.tlog
+|   |               CL.command.1.tlog
+|   |               Cl.items.tlog
+|   |               CL.read.1.tlog
+|   |               CL.write.1.tlog
+|   |               CustomBuild.command.1.tlog
+|   |               CustomBuild.read.1.tlog
+|   |               CustomBuild.write.1.tlog
+|   |               glad_lib.lastbuildstate
+|   |               Lib-link.read.1.tlog
+|   |               Lib-link.write.1.tlog
+|   |               Lib.command.1.tlog
+|   |               
+|   +---Lander.dir
+|   |   \---Debug
+|   |       |   Camera.obj
+|   |       |   CommandModule.obj
+|   |       |   InputManager.obj
+|   |       |   Lander.exe.recipe
+|   |       |   Lander.ilk
+|   |       |   main.obj
+|   |       |   Mesh.obj
+|   |       |   Model.obj
+|   |       |   Shader.obj
+|   |       |   Sphere.obj
+|   |       |   TextRenderer.obj
+|   |       |   TextureLoader.obj
+|   |       |   UIManager.obj
+|   |       |   vc143.pdb
+|   |       |   
+|   |       \---Lander.tlog
+|   |               CL.command.1.tlog
+|   |               Cl.items.tlog
+|   |               CL.read.1.tlog
+|   |               CL.write.1.tlog
+|   |               CustomBuild.command.1.tlog
+|   |               CustomBuild.read.1.tlog
+|   |               CustomBuild.write.1.tlog
+|   |               Lander.lastbuildstate
+|   |               link.command.1.tlog
+|   |               link.read.1.tlog
+|   |               link.secondary.1.tlog
+|   |               link.write.1.tlog
+|   |               
+|   +---vendor
+|   |   \---freetype
+|   |       |   ALL_BUILD.vcxproj
+|   |       |   ALL_BUILD.vcxproj.filters
+|   |       |   cmake_install.cmake
+|   |       |   freetype.sln
+|   |       |   freetype.vcxproj
+|   |       |   freetype.vcxproj.filters
+|   |       |   INSTALL.vcxproj
+|   |       |   INSTALL.vcxproj.filters
+|   |       |   PACKAGE.vcxproj
+|   |       |   PACKAGE.vcxproj.filters
+|   |       |   
+|   |       +---CMakeFiles
+|   |       |   |   generate.stamp
+|   |       |   |   generate.stamp.depend
+|   |       |   |   
+|   |       |   \---Export
+|   |       |       \---778b4f54a68e80ec034bf381f364ca2c
+|   |       |               freetype-config-debug.cmake
+|   |       |               freetype-config-minsizerel.cmake
+|   |       |               freetype-config-release.cmake
+|   |       |               freetype-config-relwithdebinfo.cmake
+|   |       |               freetype-config.cmake
+|   |       |               
+|   |       +---Debug
+|   |       |       freetyped.lib
+|   |       |       freetyped.pdb
+|   |       |       
+|   |       +---freetype.dir
+|   |       |   \---Debug
+|   |       |       |   autofit.obj
+|   |       |       |   bdf.obj
+|   |       |       |   cff.obj
+|   |       |       |   freetyped.lib.recipe
+|   |       |       |   ftbase.obj
+|   |       |       |   ftbbox.obj
+|   |       |       |   ftbdf.obj
+|   |       |       |   ftbitmap.obj
+|   |       |       |   ftbzip2.obj
+|   |       |       |   ftcache.obj
+|   |       |       |   ftcid.obj
+|   |       |       |   ftdebug.obj
+|   |       |       |   ftfstype.obj
+|   |       |       |   ftgasp.obj
+|   |       |       |   ftglyph.obj
+|   |       |       |   ftgxval.obj
+|   |       |       |   ftgzip.obj
+|   |       |       |   ftinit.obj
+|   |       |       |   ftlzw.obj
+|   |       |       |   ftmm.obj
+|   |       |       |   ftotval.obj
+|   |       |       |   ftpatent.obj
+|   |       |       |   ftpfr.obj
+|   |       |       |   ftstroke.obj
+|   |       |       |   ftsynth.obj
+|   |       |       |   ftsystem.obj
+|   |       |       |   fttype1.obj
+|   |       |       |   ftver.res
+|   |       |       |   ftwinfnt.obj
+|   |       |       |   pcf.obj
+|   |       |       |   pfr.obj
+|   |       |       |   psaux.obj
+|   |       |       |   pshinter.obj
+|   |       |       |   psnames.obj
+|   |       |       |   raster.obj
+|   |       |       |   sfnt.obj
+|   |       |       |   smooth.obj
+|   |       |       |   truetype.obj
+|   |       |       |   type1.obj
+|   |       |       |   type1cid.obj
+|   |       |       |   type42.obj
+|   |       |       |   winfnt.obj
+|   |       |       |   
+|   |       |       \---freetype.tlog
+|   |       |               CL.command.1.tlog
+|   |       |               Cl.items.tlog
+|   |       |               CL.read.1.tlog
+|   |       |               CL.write.1.tlog
+|   |       |               CustomBuild.command.1.tlog
+|   |       |               CustomBuild.read.1.tlog
+|   |       |               CustomBuild.write.1.tlog
+|   |       |               freetype.lastbuildstate
+|   |       |               Lib-link-cvtres.read.1.tlog
+|   |       |               Lib-link-cvtres.write.1.tlog
+|   |       |               Lib.command.1.tlog
+|   |       |               rc.command.1.tlog
+|   |       |               rc.read.1.tlog
+|   |       |               rc.write.1.tlog
+|   |       |               
+|   |       \---include
+|   |           \---freetype
+|   |               \---config
+|   |                       ftconfig.h
+|   |                       ftoption.h
+|   |                       
+|   \---x64
+|       \---Debug
+|           +---ALL_BUILD
+|           |   |   ALL_BUILD.recipe
+|           |   |   
+|           |   \---ALL_BUILD.tlog
+|           |           ALL_BUILD.lastbuildstate
+|           |           CustomBuild.command.1.tlog
+|           |           CustomBuild.read.1.tlog
+|           |           CustomBuild.write.1.tlog
+|           |           
+|           \---ZERO_CHECK
+|               |   ZERO_CHECK.recipe
+|               |   
+|               \---ZERO_CHECK.tlog
+|                       CustomBuild.command.1.tlog
+|                       CustomBuild.read.1.tlog
+|                       CustomBuild.write.1.tlog
+|                       ZERO_CHECK.lastbuildstate
+|                       
++---src
+|   |   main.cpp
+|   |   
+|   +---engine
+|   |   +---core
+|   |   |       GameObject.h
+|   |   |       InputManager.cpp
+|   |   |       InputManager.h
+|   |   |       Transform.h
+|   |   |       
+|   |   +---graphics
+|   |   |       Camera.cpp
+|   |   |       Camera.h
+|   |   |       Mesh.cpp
+|   |   |       Mesh.h
+|   |   |       Model.cpp
+|   |   |       Model.h
+|   |   |       Renderer.h
+|   |   |       Shader.cpp
+|   |   |       Shader.h
+|   |   |       Sphere.cpp
+|   |   |       Sphere.h
+|   |   |       TextureLoader.cpp
+|   |   |       TextureLoader.h
+|   |   |       
+|   |   +---physics
+|   |   |       PhysicsWorld.h
+|   |   |       RigidBody.h
+|   |   |       
+|   |   \---ui
+|   |           TextRenderer.cpp
+|   |           TextRenderer.h
+|   |           UIManager.cpp
+|   |           UIManager.h
+|   |           
+|   \---game
+|           CommandModule.cpp
+|           CommandModule.h
+|           GameScene.h
+|           
+\---vendor
+    +---Assimp
+    |   |   CREDITS
+    |   |   LICENSE
+    |   |   README.md
+    |   |   readme_installer.txt
+    |   |   unins000.dat
+    |   |   unins000.exe
+    |   |   WEB
+    |   |   
+    |   +---bin
+    |   |   \---x64
+    |   |           assimp-vc143-mt.dll
+    |   |           assimp.exe
+    |   |           assimp_viewer.exe
+    |   |           D3DCompiler_42.dll
+    |   |           D3DX9_42.dll
+    |   |           
+    |   +---cmake-modules
+    |   |       assimp-hunter-config.cmake.in
+    |   |       assimp-plain-config.cmake.in
+    |   |       cmake_uninstall.cmake.in
+    |   |       Coveralls.cmake
+    |   |       CoverallsClear.cmake
+    |   |       CoverallsGenerateGcov.cmake
+    |   |       DebSourcePPA.cmake
+    |   |       Findassimp.cmake
+    |   |       FindDevIL.cmake
+    |   |       FindDirectX.cmake
+    |   |       FindPkgMacros.cmake
+    |   |       FindRT.cmake
+    |   |       FindZLIB.cmake
+    |   |       HunterGate.cmake
+    |   |       MinGW_x86_64.cmake
+    |   |       PrecompiledHeader.cmake
+    |   |       
+    |   +---include
+    |   |   \---assimp
+    |   |       |   .editorconfig
+    |   |       |   aabb.h
+    |   |       |   ai_assert.h
+    |   |       |   anim.h
+    |   |       |   Base64.hpp
+    |   |       |   BaseImporter.h
+    |   |       |   Bitmap.h
+    |   |       |   BlobIOSystem.h
+    |   |       |   ByteSwapper.h
+    |   |       |   camera.h
+    |   |       |   cexport.h
+    |   |       |   cfileio.h
+    |   |       |   cimport.h
+    |   |       |   ColladaMetaData.h
+    |   |       |   color4.h
+    |   |       |   color4.inl
+    |   |       |   commonMetaData.h
+    |   |       |   config.h
+    |   |       |   config.h.in
+    |   |       |   CreateAnimMesh.h
+    |   |       |   DefaultIOStream.h
+    |   |       |   DefaultIOSystem.h
+    |   |       |   DefaultLogger.hpp
+    |   |       |   defs.h
+    |   |       |   Exceptional.h
+    |   |       |   Exporter.hpp
+    |   |       |   fast_atof.h
+    |   |       |   GenericProperty.h
+    |   |       |   GltfMaterial.h
+    |   |       |   Hash.h
+    |   |       |   Importer.hpp
+    |   |       |   importerdesc.h
+    |   |       |   IOStream.hpp
+    |   |       |   IOStreamBuffer.h
+    |   |       |   IOSystem.hpp
+    |   |       |   light.h
+    |   |       |   LineSplitter.h
+    |   |       |   LogAux.h
+    |   |       |   Logger.hpp
+    |   |       |   LogStream.hpp
+    |   |       |   material.h
+    |   |       |   material.inl
+    |   |       |   MathFunctions.h
+    |   |       |   matrix3x3.h
+    |   |       |   matrix3x3.inl
+    |   |       |   matrix4x4.h
+    |   |       |   matrix4x4.inl
+    |   |       |   MemoryIOWrapper.h
+    |   |       |   mesh.h
+    |   |       |   metadata.h
+    |   |       |   NullLogger.hpp
+    |   |       |   ObjMaterial.h
+    |   |       |   ParsingUtils.h
+    |   |       |   pbrmaterial.h
+    |   |       |   postprocess.h
+    |   |       |   Profiler.h
+    |   |       |   ProgressHandler.hpp
+    |   |       |   qnan.h
+    |   |       |   quaternion.h
+    |   |       |   quaternion.inl
+    |   |       |   RemoveComments.h
+    |   |       |   scene.h
+    |   |       |   SceneCombiner.h
+    |   |       |   SGSpatialSort.h
+    |   |       |   SkeletonMeshBuilder.h
+    |   |       |   SmallVector.h
+    |   |       |   SmoothingGroups.h
+    |   |       |   SmoothingGroups.inl
+    |   |       |   SpatialSort.h
+    |   |       |   StandardShapes.h
+    |   |       |   StreamReader.h
+    |   |       |   StreamWriter.h
+    |   |       |   StringComparison.h
+    |   |       |   StringUtils.h
+    |   |       |   Subdivision.h
+    |   |       |   texture.h
+    |   |       |   TinyFormatter.h
+    |   |       |   types.h
+    |   |       |   vector2.h
+    |   |       |   vector2.inl
+    |   |       |   vector3.h
+    |   |       |   vector3.inl
+    |   |       |   version.h
+    |   |       |   Vertex.h
+    |   |       |   XmlParser.h
+    |   |       |   XMLTools.h
+    |   |       |   ZipArchiveIOSystem.h
+    |   |       |   
+    |   |       +---Compiler
+    |   |       |       poppack1.h
+    |   |       |       pstdint.h
+    |   |       |       pushpack1.h
+    |   |       |       
+    |   |       \---port
+    |   |           \---AndroidJNI
+    |   |                   AndroidJNIIOSystem.h
+    |   |                   BundledAssetIOSystem.h
+    |   |                   
+    |   +---lib
+    |   |   \---x64
+    |   |           assimp-vc143-mt.lib
+    |   |           
+    |   +---samples
+    |   |   |   README
+    |   |   |   
+    |   |   +---SharedCode
+    |   |   |       UTFConverter.cpp
+    |   |   |       UTFConverter.h
+    |   |   |       
+    |   |   +---SimpleAssimpViewX
+    |   |   |   |   main.m
+    |   |   |   |   ModelLoaderHelperClasses.h
+    |   |   |   |   ModelLoaderHelperClasses.mm
+    |   |   |   |   MyDocument.h
+    |   |   |   |   MyDocument.mm
+    |   |   |   |   README
+    |   |   |   |   SimpleAssimpViewX-Info.plist
+    |   |   |   |   SimpleAssimpViewX_Prefix.pch
+    |   |   |   |   
+    |   |   |   +---English.lproj
+    |   |   |   |       Credits.rtf
+    |   |   |   |       InfoPlist.strings
+    |   |   |   |       MainMenu.xib
+    |   |   |   |       MyDocument.xib
+    |   |   |   |       
+    |   |   |   +---include
+    |   |   |   |       copy_assimp_headers_here.txt
+    |   |   |   |       
+    |   |   |   +---MyDocument.xcdatamodel
+    |   |   |   |       elements
+    |   |   |   |       layout
+    |   |   |   |       
+    |   |   |   \---SimpleAssimpViewX.xcodeproj
+    |   |   |           project.pbxproj
+    |   |   |           vade.mode1v3
+    |   |   |           vade.pbxuser
+    |   |   |           
+    |   |   +---SimpleOpenGL
+    |   |   |       CMakeLists.txt
+    |   |   |       Sample_SimpleOpenGL.c
+    |   |   |       SimpleOpenGL.sln
+    |   |   |       SimpleOpenGL.vcproj
+    |   |   |       
+    |   |   +---SimpleTexturedDirectx11
+    |   |   |   |   CMakeLists.txt
+    |   |   |   |   
+    |   |   |   \---SimpleTexturedDirectx11
+    |   |   |           main.cpp
+    |   |   |           Mesh.h
+    |   |   |           ModelLoader.cpp
+    |   |   |           ModelLoader.h
+    |   |   |           PixelShader.hlsl
+    |   |   |           SafeRelease.hpp
+    |   |   |           TextureLoader.cpp
+    |   |   |           TextureLoader.h
+    |   |   |           VertexShader.hlsl
+    |   |   |           
+    |   |   \---SimpleTexturedOpenGL
+    |   |       |   CMakeLists.txt
+    |   |       |   SimpleTexturedOpenGL.sln
+    |   |       |   
+    |   |       \---SimpleTexturedOpenGL
+    |   |           |   SimpleTexturedOpenGL.vcproj
+    |   |           |   
+    |   |           \---src
+    |   |                   model_loading.cpp
+    |   |                   
+    |   +---scripts
+    |   |   |   adjust_header_paths.sh
+    |   |   |   
+    |   |   +---android_crosscompile
+    |   |   |       make_android.bat
+    |   |   |       
+    |   |   +---BlenderImporter
+    |   |   |       BlenderScene.cpp.template
+    |   |   |       BlenderSceneGen.h.template
+    |   |   |       genblenddna.py
+    |   |   |       
+    |   |   +---OgreImporter
+    |   |   |       assimp.tpl
+    |   |   |       
+    |   |   \---StepImporter
+    |   |           CppGenerator.py
+    |   |           ExpressReader.py
+    |   |           extract_step_token.py
+    |   |           genentitylist.sh
+    |   |           IFCReaderGen.cpp.template
+    |   |           IFCReaderGen.h.template
+    |   |           ifc_entitylist.txt
+    |   |           part403ts_wg3n2635mim_lf.exp
+    |   |           schema_ap203e2_mim_lf.exp
+    |   |           schema_ifc2x3.exp
+    |   |           StepReaderGen.cpp.template
+    |   |           StepReaderGen.h.template
+    |   |           step_entitylist.txt
+    |   |           
+    |   \---stub
+    |           vc_redist.x64.exe
+    |           
+    +---freetype
+    |   |   autogen.sh
+    |   |   ChangeLog
+    |   |   ChangeLog.20
+    |   |   ChangeLog.21
+    |   |   ChangeLog.22
+    |   |   ChangeLog.23
+    |   |   ChangeLog.24
+    |   |   ChangeLog.25
+    |   |   ChangeLog.26
+    |   |   ChangeLog.27
+    |   |   ChangeLog.28
+    |   |   CMakeLists.txt
+    |   |   configure
+    |   |   Jamfile
+    |   |   Jamrules
+    |   |   Makefile
+    |   |   modules.cfg
+    |   |   README
+    |   |   README.git
+    |   |   version.sed
+    |   |   vms_make.com
+    |   |   
+    |   +---builds
+    |   |   |   detect.mk
+    |   |   |   exports.mk
+    |   |   |   freetype.mk
+    |   |   |   link_dos.mk
+    |   |   |   link_std.mk
+    |   |   |   modules.mk
+    |   |   |   toplevel.mk
+    |   |   |   
+    |   |   +---amiga
+    |   |   |   |   makefile
+    |   |   |   |   makefile.os4
+    |   |   |   |   README
+    |   |   |   |   smakefile
+    |   |   |   |   
+    |   |   |   +---include
+    |   |   |   |   \---config
+    |   |   |   |           ftconfig.h
+    |   |   |   |           ftmodule.h
+    |   |   |   |           
+    |   |   |   \---src
+    |   |   |       \---base
+    |   |   |               ftdebug.c
+    |   |   |               ftsystem.c
+    |   |   |               
+    |   |   +---ansi
+    |   |   |       ansi-def.mk
+    |   |   |       ansi.mk
+    |   |   |       
+    |   |   +---atari
+    |   |   |       ATARI.H
+    |   |   |       deflinejoiner.awk
+    |   |   |       FNames.SIC
+    |   |   |       FREETYPE.PRJ
+    |   |   |       gen-purec-patch.sh
+    |   |   |       README.TXT
+    |   |   |       
+    |   |   +---beos
+    |   |   |       beos-def.mk
+    |   |   |       beos.mk
+    |   |   |       detect.mk
+    |   |   |       
+    |   |   +---cmake
+    |   |   |       FindHarfBuzz.cmake
+    |   |   |       iOS.cmake
+    |   |   |       testbuild.sh
+    |   |   |       
+    |   |   +---compiler
+    |   |   |       ansi-cc.mk
+    |   |   |       bcc-dev.mk
+    |   |   |       bcc.mk
+    |   |   |       emx.mk
+    |   |   |       gcc-dev.mk
+    |   |   |       gcc.mk
+    |   |   |       intelc.mk
+    |   |   |       unix-lcc.mk
+    |   |   |       visualage.mk
+    |   |   |       visualc.mk
+    |   |   |       watcom.mk
+    |   |   |       win-lcc.mk
+    |   |   |       
+    |   |   +---dos
+    |   |   |       detect.mk
+    |   |   |       dos-def.mk
+    |   |   |       dos-emx.mk
+    |   |   |       dos-gcc.mk
+    |   |   |       dos-wat.mk
+    |   |   |       
+    |   |   +---mac
+    |   |   |       ascii2mpw.py
+    |   |   |       freetype-Info.plist
+    |   |   |       FreeType.m68k_cfm.make.txt
+    |   |   |       FreeType.m68k_far.make.txt
+    |   |   |       FreeType.ppc_carbon.make.txt
+    |   |   |       FreeType.ppc_classic.make.txt
+    |   |   |       ftlib.prj.xml
+    |   |   |       ftmac.c
+    |   |   |       README
+    |   |   |       
+    |   |   +---os2
+    |   |   |       detect.mk
+    |   |   |       os2-def.mk
+    |   |   |       os2-dev.mk
+    |   |   |       os2-gcc.mk
+    |   |   |       
+    |   |   +---symbian
+    |   |   |       bld.inf
+    |   |   |       freetype.mmp
+    |   |   |       
+    |   |   +---unix
+    |   |   |       aclocal.m4
+    |   |   |       config.guess
+    |   |   |       config.sub
+    |   |   |       configure
+    |   |   |       configure.ac
+    |   |   |       configure.raw
+    |   |   |       detect.mk
+    |   |   |       freetype-config.in
+    |   |   |       freetype2.in
+    |   |   |       freetype2.m4
+    |   |   |       ft-munmap.m4
+    |   |   |       ftconfig.in
+    |   |   |       ftsystem.c
+    |   |   |       install-sh
+    |   |   |       install.mk
+    |   |   |       ltmain.sh
+    |   |   |       pkg.m4
+    |   |   |       unix-cc.in
+    |   |   |       unix-def.in
+    |   |   |       unix-dev.mk
+    |   |   |       unix-lcc.mk
+    |   |   |       unix.mk
+    |   |   |       unixddef.mk
+    |   |   |       
+    |   |   +---vms
+    |   |   |       ftconfig.h
+    |   |   |       ftsystem.c
+    |   |   |       
+    |   |   +---wince
+    |   |   |   |   ftdebug.c
+    |   |   |   |   
+    |   |   |   +---vc2005-ce
+    |   |   |   |       freetype.sln
+    |   |   |   |       freetype.vcproj
+    |   |   |   |       index.html
+    |   |   |   |       
+    |   |   |   \---vc2008-ce
+    |   |   |           freetype.sln
+    |   |   |           freetype.vcproj
+    |   |   |           index.html
+    |   |   |           
+    |   |   \---windows
+    |   |       |   detect.mk
+    |   |       |   ftdebug.c
+    |   |       |   w32-bcc.mk
+    |   |       |   w32-bccd.mk
+    |   |       |   w32-dev.mk
+    |   |       |   w32-gcc.mk
+    |   |       |   w32-icc.mk
+    |   |       |   w32-intl.mk
+    |   |       |   w32-lcc.mk
+    |   |       |   w32-mingw32.mk
+    |   |       |   w32-vcc.mk
+    |   |       |   w32-wat.mk
+    |   |       |   win32-def.mk
+    |   |       |   
+    |   |       +---vc2010
+    |   |       |       freetype.sln
+    |   |       |       freetype.user.props
+    |   |       |       freetype.vcxproj
+    |   |       |       freetype.vcxproj.filters
+    |   |       |       index.html
+    |   |       |       
+    |   |       +---visualc
+    |   |       |       freetype.dsp
+    |   |       |       freetype.dsw
+    |   |       |       freetype.sln
+    |   |       |       freetype.vcproj
+    |   |       |       index.html
+    |   |       |       
+    |   |       \---visualce
+    |   |               freetype.dsp
+    |   |               freetype.dsw
+    |   |               freetype.vcproj
+    |   |               index.html
+    |   |               
+    |   +---devel
+    |   |       ft2build.h
+    |   |       ftoption.h
+    |   |       
+    |   +---docs
+    |   |   |   CHANGES
+    |   |   |   CMAKE
+    |   |   |   CUSTOMIZE
+    |   |   |   DEBUG
+    |   |   |   DOCGUIDE
+    |   |   |   formats.txt
+    |   |   |   freetype-config.1
+    |   |   |   FTL.TXT
+    |   |   |   GPLv2.TXT
+    |   |   |   INSTALL
+    |   |   |   INSTALL.ANY
+    |   |   |   INSTALL.CROSS
+    |   |   |   INSTALL.GNU
+    |   |   |   INSTALL.MAC
+    |   |   |   INSTALL.UNIX
+    |   |   |   INSTALL.VMS
+    |   |   |   LICENSE.TXT
+    |   |   |   MAKEPP
+    |   |   |   PROBLEMS
+    |   |   |   raster.txt
+    |   |   |   release
+    |   |   |   TODO
+    |   |   |   VERSIONS.TXT
+    |   |   |   
+    |   |   \---reference
+    |   |       |   README
+    |   |       |   
+    |   |       \---site
+    |   |           |   404.html
+    |   |           |   ft2-auto_hinter.html
+    |   |           |   ft2-base_interface.html
+    |   |           |   ft2-basic_types.html
+    |   |           |   ft2-bdf_fonts.html
+    |   |           |   ft2-bitmap_handling.html
+    |   |           |   ft2-bzip2.html
+    |   |           |   ft2-cache_subsystem.html
+    |   |           |   ft2-cff_driver.html
+    |   |           |   ft2-cid_fonts.html
+    |   |           |   ft2-color_management.html
+    |   |           |   ft2-computations.html
+    |   |           |   ft2-error_code_values.html
+    |   |           |   ft2-error_enumerations.html
+    |   |           |   ft2-font_formats.html
+    |   |           |   ft2-gasp_table.html
+    |   |           |   ft2-glyph_management.html
+    |   |           |   ft2-glyph_stroker.html
+    |   |           |   ft2-glyph_variants.html
+    |   |           |   ft2-gx_validation.html
+    |   |           |   ft2-gzip.html
+    |   |           |   ft2-header_file_macros.html
+    |   |           |   ft2-header_inclusion.html
+    |   |           |   ft2-incremental.html
+    |   |           |   ft2-index.html
+    |   |           |   ft2-layer_management.html
+    |   |           |   ft2-lcd_rendering.html
+    |   |           |   ft2-list_processing.html
+    |   |           |   ft2-lzw.html
+    |   |           |   ft2-mac_specific.html
+    |   |           |   ft2-module_management.html
+    |   |           |   ft2-multiple_masters.html
+    |   |           |   ft2-ot_validation.html
+    |   |           |   ft2-outline_processing.html
+    |   |           |   ft2-parameter_tags.html
+    |   |           |   ft2-pcf_driver.html
+    |   |           |   ft2-pfr_fonts.html
+    |   |           |   ft2-properties.html
+    |   |           |   ft2-quick_advance.html
+    |   |           |   ft2-raster.html
+    |   |           |   ft2-sfnt_names.html
+    |   |           |   ft2-sizes_management.html
+    |   |           |   ft2-system_interface.html
+    |   |           |   ft2-t1_cid_driver.html
+    |   |           |   ft2-truetype_engine.html
+    |   |           |   ft2-truetype_tables.html
+    |   |           |   ft2-tt_driver.html
+    |   |           |   ft2-type1_tables.html
+    |   |           |   ft2-user_allocation.html
+    |   |           |   ft2-version.html
+    |   |           |   ft2-winfnt_fonts.html
+    |   |           |   index.html
+    |   |           |   sitemap.xml
+    |   |           |   sitemap.xml.gz
+    |   |           |   
+    |   |           +---assets
+    |   |           |   +---fonts
+    |   |           |   |   |   font-awesome.css
+    |   |           |   |   |   material-icons.css
+    |   |           |   |   |   
+    |   |           |   |   \---specimen
+    |   |           |   |           FontAwesome.ttf
+    |   |           |   |           FontAwesome.woff
+    |   |           |   |           FontAwesome.woff2
+    |   |           |   |           MaterialIcons-Regular.ttf
+    |   |           |   |           MaterialIcons-Regular.woff
+    |   |           |   |           MaterialIcons-Regular.woff2
+    |   |           |   |           
+    |   |           |   +---images
+    |   |           |   |   |   favicon.png
+    |   |           |   |   |   
+    |   |           |   |   \---icons
+    |   |           |   |           bitbucket.1b09e088.svg
+    |   |           |   |           github.f0b8504a.svg
+    |   |           |   |           gitlab.6dd19c00.svg
+    |   |           |   |           
+    |   |           |   +---javascripts
+    |   |           |   |   |   application.d9aa80ab.js
+    |   |           |   |   |   modernizr.1f0bcf2b.js
+    |   |           |   |   |   
+    |   |           |   |   \---lunr
+    |   |           |   |           lunr.da.js
+    |   |           |   |           lunr.de.js
+    |   |           |   |           lunr.du.js
+    |   |           |   |           lunr.es.js
+    |   |           |   |           lunr.fi.js
+    |   |           |   |           lunr.fr.js
+    |   |           |   |           lunr.hu.js
+    |   |           |   |           lunr.it.js
+    |   |           |   |           lunr.ja.js
+    |   |           |   |           lunr.jp.js
+    |   |           |   |           lunr.multi.js
+    |   |           |   |           lunr.nl.js
+    |   |           |   |           lunr.no.js
+    |   |           |   |           lunr.pt.js
+    |   |           |   |           lunr.ro.js
+    |   |           |   |           lunr.ru.js
+    |   |           |   |           lunr.stemmer.support.js
+    |   |           |   |           lunr.sv.js
+    |   |           |   |           lunr.th.js
+    |   |           |   |           lunr.tr.js
+    |   |           |   |           tinyseg.js
+    |   |           |   |           wordcut.js
+    |   |           |   |           
+    |   |           |   \---stylesheets
+    |   |           |           application-palette.224b79ff.css
+    |   |           |           application.982221ab.css
+    |   |           |           
+    |   |           +---images
+    |   |           |       favico.ico
+    |   |           |       
+    |   |           +---javascripts
+    |   |           |       extra.js
+    |   |           |       
+    |   |           +---search
+    |   |           |       search_index.json
+    |   |           |       
+    |   |           \---stylesheets
+    |   |                   extra.css
+    |   |                   
+    |   +---include
+    |   |   |   ft2build.h
+    |   |   |   
+    |   |   \---freetype
+    |   |       |   freetype.h
+    |   |       |   ftadvanc.h
+    |   |       |   ftbbox.h
+    |   |       |   ftbdf.h
+    |   |       |   ftbitmap.h
+    |   |       |   ftbzip2.h
+    |   |       |   ftcache.h
+    |   |       |   ftchapters.h
+    |   |       |   ftcid.h
+    |   |       |   ftcolor.h
+    |   |       |   ftdriver.h
+    |   |       |   fterrdef.h
+    |   |       |   fterrors.h
+    |   |       |   ftfntfmt.h
+    |   |       |   ftgasp.h
+    |   |       |   ftglyph.h
+    |   |       |   ftgxval.h
+    |   |       |   ftgzip.h
+    |   |       |   ftimage.h
+    |   |       |   ftincrem.h
+    |   |       |   ftlcdfil.h
+    |   |       |   ftlist.h
+    |   |       |   ftlzw.h
+    |   |       |   ftmac.h
+    |   |       |   ftmm.h
+    |   |       |   ftmodapi.h
+    |   |       |   ftmoderr.h
+    |   |       |   ftotval.h
+    |   |       |   ftoutln.h
+    |   |       |   ftparams.h
+    |   |       |   ftpfr.h
+    |   |       |   ftrender.h
+    |   |       |   ftsizes.h
+    |   |       |   ftsnames.h
+    |   |       |   ftstroke.h
+    |   |       |   ftsynth.h
+    |   |       |   ftsystem.h
+    |   |       |   fttrigon.h
+    |   |       |   fttypes.h
+    |   |       |   ftwinfnt.h
+    |   |       |   t1tables.h
+    |   |       |   ttnameid.h
+    |   |       |   tttables.h
+    |   |       |   tttags.h
+    |   |       |   
+    |   |       +---config
+    |   |       |       ftconfig.h
+    |   |       |       ftheader.h
+    |   |       |       ftmodule.h
+    |   |       |       ftoption.h
+    |   |       |       ftstdlib.h
+    |   |       |       
+    |   |       \---internal
+    |   |           |   autohint.h
+    |   |           |   cffotypes.h
+    |   |           |   cfftypes.h
+    |   |           |   ftcalc.h
+    |   |           |   ftdebug.h
+    |   |           |   ftdrv.h
+    |   |           |   ftgloadr.h
+    |   |           |   fthash.h
+    |   |           |   ftmemory.h
+    |   |           |   ftobjs.h
+    |   |           |   ftpsprop.h
+    |   |           |   ftrfork.h
+    |   |           |   ftserv.h
+    |   |           |   ftstream.h
+    |   |           |   fttrace.h
+    |   |           |   ftvalid.h
+    |   |           |   internal.h
+    |   |           |   psaux.h
+    |   |           |   pshints.h
+    |   |           |   sfnt.h
+    |   |           |   t1types.h
+    |   |           |   tttypes.h
+    |   |           |   
+    |   |           \---services
+    |   |                   svbdf.h
+    |   |                   svcfftl.h
+    |   |                   svcid.h
+    |   |                   svfntfmt.h
+    |   |                   svgldict.h
+    |   |                   svgxval.h
+    |   |                   svkern.h
+    |   |                   svmetric.h
+    |   |                   svmm.h
+    |   |                   svotval.h
+    |   |                   svpfr.h
+    |   |                   svpostnm.h
+    |   |                   svprop.h
+    |   |                   svpscmap.h
+    |   |                   svpsinfo.h
+    |   |                   svsfnt.h
+    |   |                   svttcmap.h
+    |   |                   svtteng.h
+    |   |                   svttglyf.h
+    |   |                   svwinfnt.h
+    |   |                   
+    |   +---objs
+    |   |       README
+    |   |       
+    |   \---src
+    |       |   Jamfile
+    |       |   
+    |       +---autofit
+    |       |       afangles.c
+    |       |       afangles.h
+    |       |       afblue.c
+    |       |       afblue.cin
+    |       |       afblue.dat
+    |       |       afblue.h
+    |       |       afblue.hin
+    |       |       afcjk.c
+    |       |       afcjk.h
+    |       |       afcover.h
+    |       |       afdummy.c
+    |       |       afdummy.h
+    |       |       aferrors.h
+    |       |       afglobal.c
+    |       |       afglobal.h
+    |       |       afhints.c
+    |       |       afhints.h
+    |       |       afindic.c
+    |       |       afindic.h
+    |       |       aflatin.c
+    |       |       aflatin.h
+    |       |       aflatin2.c
+    |       |       aflatin2.h
+    |       |       afloader.c
+    |       |       afloader.h
+    |       |       afmodule.c
+    |       |       afmodule.h
+    |       |       afranges.c
+    |       |       afranges.h
+    |       |       afscript.h
+    |       |       afshaper.c
+    |       |       afshaper.h
+    |       |       afstyles.h
+    |       |       aftypes.h
+    |       |       afwarp.c
+    |       |       afwarp.h
+    |       |       afwrtsys.h
+    |       |       autofit.c
+    |       |       Jamfile
+    |       |       module.mk
+    |       |       rules.mk
+    |       |       
+    |       +---base
+    |       |       ftadvanc.c
+    |       |       ftbase.c
+    |       |       ftbase.h
+    |       |       ftbbox.c
+    |       |       ftbdf.c
+    |       |       ftbitmap.c
+    |       |       ftcalc.c
+    |       |       ftcid.c
+    |       |       ftcolor.c
+    |       |       ftdbgmem.c
+    |       |       ftdebug.c
+    |       |       fterrors.c
+    |       |       ftfntfmt.c
+    |       |       ftfstype.c
+    |       |       ftgasp.c
+    |       |       ftgloadr.c
+    |       |       ftglyph.c
+    |       |       ftgxval.c
+    |       |       fthash.c
+    |       |       ftinit.c
+    |       |       ftlcdfil.c
+    |       |       ftmac.c
+    |       |       ftmm.c
+    |       |       ftobjs.c
+    |       |       ftotval.c
+    |       |       ftoutln.c
+    |       |       ftpatent.c
+    |       |       ftpfr.c
+    |       |       ftpsprop.c
+    |       |       ftrfork.c
+    |       |       ftsnames.c
+    |       |       ftstream.c
+    |       |       ftstroke.c
+    |       |       ftsynth.c
+    |       |       ftsystem.c
+    |       |       fttrigon.c
+    |       |       fttype1.c
+    |       |       ftutil.c
+    |       |       ftver.rc
+    |       |       ftwinfnt.c
+    |       |       Jamfile
+    |       |       md5.c
+    |       |       md5.h
+    |       |       rules.mk
+    |       |       
+    |       +---bdf
+    |       |       bdf.c
+    |       |       bdf.h
+    |       |       bdfdrivr.c
+    |       |       bdfdrivr.h
+    |       |       bdferror.h
+    |       |       bdflib.c
+    |       |       Jamfile
+    |       |       module.mk
+    |       |       README
+    |       |       rules.mk
+    |       |       
+    |       +---bzip2
+    |       |       ftbzip2.c
+    |       |       Jamfile
+    |       |       rules.mk
+    |       |       
+    |       +---cache
+    |       |       ftcache.c
+    |       |       ftcbasic.c
+    |       |       ftccache.c
+    |       |       ftccache.h
+    |       |       ftccback.h
+    |       |       ftccmap.c
+    |       |       ftcerror.h
+    |       |       ftcglyph.c
+    |       |       ftcglyph.h
+    |       |       ftcimage.c
+    |       |       ftcimage.h
+    |       |       ftcmanag.c
+    |       |       ftcmanag.h
+    |       |       ftcmru.c
+    |       |       ftcmru.h
+    |       |       ftcsbits.c
+    |       |       ftcsbits.h
+    |       |       Jamfile
+    |       |       rules.mk
+    |       |       
+    |       +---cff
+    |       |       cff.c
+    |       |       cffcmap.c
+    |       |       cffcmap.h
+    |       |       cffdrivr.c
+    |       |       cffdrivr.h
+    |       |       cfferrs.h
+    |       |       cffgload.c
+    |       |       cffgload.h
+    |       |       cffload.c
+    |       |       cffload.h
+    |       |       cffobjs.c
+    |       |       cffobjs.h
+    |       |       cffparse.c
+    |       |       cffparse.h
+    |       |       cfftoken.h
+    |       |       Jamfile
+    |       |       module.mk
+    |       |       rules.mk
+    |       |       
+    |       +---cid
+    |       |       ciderrs.h
+    |       |       cidgload.c
+    |       |       cidgload.h
+    |       |       cidload.c
+    |       |       cidload.h
+    |       |       cidobjs.c
+    |       |       cidobjs.h
+    |       |       cidparse.c
+    |       |       cidparse.h
+    |       |       cidriver.c
+    |       |       cidriver.h
+    |       |       cidtoken.h
+    |       |       Jamfile
+    |       |       module.mk
+    |       |       rules.mk
+    |       |       type1cid.c
+    |       |       
+    |       +---gxvalid
+    |       |       gxvalid.c
+    |       |       gxvalid.h
+    |       |       gxvbsln.c
+    |       |       gxvcommn.c
+    |       |       gxvcommn.h
+    |       |       gxverror.h
+    |       |       gxvfeat.c
+    |       |       gxvfeat.h
+    |       |       gxvfgen.c
+    |       |       gxvjust.c
+    |       |       gxvkern.c
+    |       |       gxvlcar.c
+    |       |       gxvmod.c
+    |       |       gxvmod.h
+    |       |       gxvmort.c
+    |       |       gxvmort.h
+    |       |       gxvmort0.c
+    |       |       gxvmort1.c
+    |       |       gxvmort2.c
+    |       |       gxvmort4.c
+    |       |       gxvmort5.c
+    |       |       gxvmorx.c
+    |       |       gxvmorx.h
+    |       |       gxvmorx0.c
+    |       |       gxvmorx1.c
+    |       |       gxvmorx2.c
+    |       |       gxvmorx4.c
+    |       |       gxvmorx5.c
+    |       |       gxvopbd.c
+    |       |       gxvprop.c
+    |       |       gxvtrak.c
+    |       |       Jamfile
+    |       |       module.mk
+    |       |       README
+    |       |       rules.mk
+    |       |       
+    |       +---gzip
+    |       |       adler32.c
+    |       |       ftgzip.c
+    |       |       ftzconf.h
+    |       |       infblock.c
+    |       |       infblock.h
+    |       |       infcodes.c
+    |       |       infcodes.h
+    |       |       inffixed.h
+    |       |       inflate.c
+    |       |       inftrees.c
+    |       |       inftrees.h
+    |       |       infutil.c
+    |       |       infutil.h
+    |       |       Jamfile
+    |       |       rules.mk
+    |       |       zlib.h
+    |       |       zutil.c
+    |       |       zutil.h
+    |       |       
+    |       +---lzw
+    |       |       ftlzw.c
+    |       |       ftzopen.c
+    |       |       ftzopen.h
+    |       |       Jamfile
+    |       |       rules.mk
+    |       |       
+    |       +---otvalid
+    |       |       Jamfile
+    |       |       module.mk
+    |       |       otvalid.c
+    |       |       otvalid.h
+    |       |       otvbase.c
+    |       |       otvcommn.c
+    |       |       otvcommn.h
+    |       |       otverror.h
+    |       |       otvgdef.c
+    |       |       otvgpos.c
+    |       |       otvgpos.h
+    |       |       otvgsub.c
+    |       |       otvjstf.c
+    |       |       otvmath.c
+    |       |       otvmod.c
+    |       |       otvmod.h
+    |       |       rules.mk
+    |       |       
+    |       +---pcf
+    |       |       Jamfile
+    |       |       module.mk
+    |       |       pcf.c
+    |       |       pcf.h
+    |       |       pcfdrivr.c
+    |       |       pcfdrivr.h
+    |       |       pcferror.h
+    |       |       pcfread.c
+    |       |       pcfread.h
+    |       |       pcfutil.c
+    |       |       pcfutil.h
+    |       |       README
+    |       |       rules.mk
+    |       |       
+    |       +---pfr
+    |       |       Jamfile
+    |       |       module.mk
+    |       |       pfr.c
+    |       |       pfrcmap.c
+    |       |       pfrcmap.h
+    |       |       pfrdrivr.c
+    |       |       pfrdrivr.h
+    |       |       pfrerror.h
+    |       |       pfrgload.c
+    |       |       pfrgload.h
+    |       |       pfrload.c
+    |       |       pfrload.h
+    |       |       pfrobjs.c
+    |       |       pfrobjs.h
+    |       |       pfrsbit.c
+    |       |       pfrsbit.h
+    |       |       pfrtypes.h
+    |       |       rules.mk
+    |       |       
+    |       +---psaux
+    |       |       afmparse.c
+    |       |       afmparse.h
+    |       |       cffdecode.c
+    |       |       cffdecode.h
+    |       |       Jamfile
+    |       |       module.mk
+    |       |       psarrst.c
+    |       |       psarrst.h
+    |       |       psaux.c
+    |       |       psauxerr.h
+    |       |       psauxmod.c
+    |       |       psauxmod.h
+    |       |       psblues.c
+    |       |       psblues.h
+    |       |       psconv.c
+    |       |       psconv.h
+    |       |       pserror.c
+    |       |       pserror.h
+    |       |       psfixed.h
+    |       |       psfont.c
+    |       |       psfont.h
+    |       |       psft.c
+    |       |       psft.h
+    |       |       psglue.h
+    |       |       pshints.c
+    |       |       pshints.h
+    |       |       psintrp.c
+    |       |       psintrp.h
+    |       |       psobjs.c
+    |       |       psobjs.h
+    |       |       psread.c
+    |       |       psread.h
+    |       |       psstack.c
+    |       |       psstack.h
+    |       |       pstypes.h
+    |       |       rules.mk
+    |       |       t1cmap.c
+    |       |       t1cmap.h
+    |       |       t1decode.c
+    |       |       t1decode.h
+    |       |       
+    |       +---pshinter
+    |       |       Jamfile
+    |       |       module.mk
+    |       |       pshalgo.c
+    |       |       pshalgo.h
+    |       |       pshglob.c
+    |       |       pshglob.h
+    |       |       pshinter.c
+    |       |       pshmod.c
+    |       |       pshmod.h
+    |       |       pshnterr.h
+    |       |       pshrec.c
+    |       |       pshrec.h
+    |       |       rules.mk
+    |       |       
+    |       +---psnames
+    |       |       Jamfile
+    |       |       module.mk
+    |       |       psmodule.c
+    |       |       psmodule.h
+    |       |       psnamerr.h
+    |       |       psnames.c
+    |       |       pstables.h
+    |       |       rules.mk
+    |       |       
+    |       +---raster
+    |       |       ftmisc.h
+    |       |       ftraster.c
+    |       |       ftraster.h
+    |       |       ftrend1.c
+    |       |       ftrend1.h
+    |       |       Jamfile
+    |       |       module.mk
+    |       |       raster.c
+    |       |       rasterrs.h
+    |       |       rules.mk
+    |       |       
+    |       +---sfnt
+    |       |       Jamfile
+    |       |       module.mk
+    |       |       pngshim.c
+    |       |       pngshim.h
+    |       |       rules.mk
+    |       |       sfdriver.c
+    |       |       sfdriver.h
+    |       |       sferrors.h
+    |       |       sfnt.c
+    |       |       sfobjs.c
+    |       |       sfobjs.h
+    |       |       ttbdf.c
+    |       |       ttbdf.h
+    |       |       ttcmap.c
+    |       |       ttcmap.h
+    |       |       ttcmapc.h
+    |       |       ttcolr.c
+    |       |       ttcolr.h
+    |       |       ttcpal.c
+    |       |       ttcpal.h
+    |       |       ttkern.c
+    |       |       ttkern.h
+    |       |       ttload.c
+    |       |       ttload.h
+    |       |       ttmtx.c
+    |       |       ttmtx.h
+    |       |       ttpost.c
+    |       |       ttpost.h
+    |       |       ttsbit.c
+    |       |       ttsbit.h
+    |       |       
+    |       +---smooth
+    |       |       ftgrays.c
+    |       |       ftgrays.h
+    |       |       ftsmerrs.h
+    |       |       ftsmooth.c
+    |       |       ftsmooth.h
+    |       |       Jamfile
+    |       |       module.mk
+    |       |       rules.mk
+    |       |       smooth.c
+    |       |       
+    |       +---tools
+    |       |   |   afblue.pl
+    |       |   |   apinames.c
+    |       |   |   chktrcmp.py
+    |       |   |   cordic.py
+    |       |   |   glnames.py
+    |       |   |   Jamfile
+    |       |   |   no-copyright
+    |       |   |   test_afm.c
+    |       |   |   test_bbox.c
+    |       |   |   test_trig.c
+    |       |   |   update-copyright
+    |       |   |   update-copyright-year
+    |       |   |   
+    |       |   \---ftrandom
+    |       |           ftrandom.c
+    |       |           Makefile
+    |       |           README
+    |       |           
+    |       +---truetype
+    |       |       Jamfile
+    |       |       module.mk
+    |       |       rules.mk
+    |       |       truetype.c
+    |       |       ttdriver.c
+    |       |       ttdriver.h
+    |       |       tterrors.h
+    |       |       ttgload.c
+    |       |       ttgload.h
+    |       |       ttgxvar.c
+    |       |       ttgxvar.h
+    |       |       ttinterp.c
+    |       |       ttinterp.h
+    |       |       ttobjs.c
+    |       |       ttobjs.h
+    |       |       ttpload.c
+    |       |       ttpload.h
+    |       |       ttsubpix.c
+    |       |       ttsubpix.h
+    |       |       
+    |       +---type1
+    |       |       Jamfile
+    |       |       module.mk
+    |       |       rules.mk
+    |       |       t1afm.c
+    |       |       t1afm.h
+    |       |       t1driver.c
+    |       |       t1driver.h
+    |       |       t1errors.h
+    |       |       t1gload.c
+    |       |       t1gload.h
+    |       |       t1load.c
+    |       |       t1load.h
+    |       |       t1objs.c
+    |       |       t1objs.h
+    |       |       t1parse.c
+    |       |       t1parse.h
+    |       |       t1tokens.h
+    |       |       type1.c
+    |       |       
+    |       +---type42
+    |       |       Jamfile
+    |       |       module.mk
+    |       |       rules.mk
+    |       |       t42drivr.c
+    |       |       t42drivr.h
+    |       |       t42error.h
+    |       |       t42objs.c
+    |       |       t42objs.h
+    |       |       t42parse.c
+    |       |       t42parse.h
+    |       |       t42types.h
+    |       |       type42.c
+    |       |       
+    |       \---winfonts
+    |               fnterrs.h
+    |               Jamfile
+    |               module.mk
+    |               rules.mk
+    |               winfnt.c
+    |               winfnt.h
+    |               
+    +---glad
+    |   +---include
+    |   |   +---glad
+    |   |   |       glad.h
+    |   |   |       
+    |   |   \---KHR
+    |   |           khrplatform.h
+    |   |           
+    |   \---src
+    |           glad.c
+    |           
+    +---glfw
+    |   +---include
+    |   |   \---GLFW
+    |   |           glfw3.h
+    |   |           glfw3native.h
+    |   |           
+    |   +---lib-mingw-w64
+    |   |       glfw3.dll
+    |   |       libglfw3.a
+    |   |       libglfw3dll.a
+    |   |       
+    |   +---lib-static-ucrt
+    |   |       glfw3.dll
+    |   |       glfw3dll.lib
+    |   |       
+    |   +---lib-vc2013
+    |   |       glfw3.dll
+    |   |       glfw3.lib
+    |   |       glfw3dll.lib
+    |   |       glfw3_mt.lib
+    |   |       
+    |   +---lib-vc2015
+    |   |       glfw3.dll
+    |   |       glfw3.lib
+    |   |       glfw3dll.lib
+    |   |       glfw3_mt.lib
+    |   |       
+    |   +---lib-vc2017
+    |   |       glfw3.dll
+    |   |       glfw3.lib
+    |   |       glfw3dll.lib
+    |   |       glfw3_mt.lib
+    |   |       
+    |   +---lib-vc2019
+    |   |       glfw3.dll
+    |   |       glfw3.lib
+    |   |       glfw3dll.lib
+    |   |       glfw3_mt.lib
+    |   |       
+    |   \---lib-vc2022
+    |           glfw3.dll
+    |           glfw3.lib
+    |           glfw3dll.lib
+    |           glfw3_mt.lib
+    |           
+    +---glm
+    |   |   CMakeLists.txt
+    |   |   common.hpp
+    |   |   copying.txt
+    |   |   exponential.hpp
+    |   |   ext.hpp
+    |   |   fwd.hpp
+    |   |   geometric.hpp
+    |   |   glm.cppm
+    |   |   glm.hpp
+    |   |   integer.hpp
+    |   |   mat2x2.hpp
+    |   |   mat2x3.hpp
+    |   |   mat2x4.hpp
+    |   |   mat3x2.hpp
+    |   |   mat3x3.hpp
+    |   |   mat3x4.hpp
+    |   |   mat4x2.hpp
+    |   |   mat4x3.hpp
+    |   |   mat4x4.hpp
+    |   |   matrix.hpp
+    |   |   packing.hpp
+    |   |   trigonometric.hpp
+    |   |   vec2.hpp
+    |   |   vec3.hpp
+    |   |   vec4.hpp
+    |   |   vector_relational.hpp
+    |   |   
+    |   +---detail
+    |   |       compute_common.hpp
+    |   |       compute_vector_decl.hpp
+    |   |       compute_vector_relational.hpp
+    |   |       func_common.inl
+    |   |       func_common_simd.inl
+    |   |       func_exponential.inl
+    |   |       func_exponential_simd.inl
+    |   |       func_geometric.inl
+    |   |       func_geometric_simd.inl
+    |   |       func_integer.inl
+    |   |       func_integer_simd.inl
+    |   |       func_matrix.inl
+    |   |       func_matrix_simd.inl
+    |   |       func_packing.inl
+    |   |       func_packing_simd.inl
+    |   |       func_trigonometric.inl
+    |   |       func_trigonometric_simd.inl
+    |   |       func_vector_relational.inl
+    |   |       func_vector_relational_simd.inl
+    |   |       glm.cpp
+    |   |       qualifier.hpp
+    |   |       setup.hpp
+    |   |       type_float.hpp
+    |   |       type_half.hpp
+    |   |       type_half.inl
+    |   |       type_mat2x2.hpp
+    |   |       type_mat2x2.inl
+    |   |       type_mat2x3.hpp
+    |   |       type_mat2x3.inl
+    |   |       type_mat2x4.hpp
+    |   |       type_mat2x4.inl
+    |   |       type_mat3x2.hpp
+    |   |       type_mat3x2.inl
+    |   |       type_mat3x3.hpp
+    |   |       type_mat3x3.inl
+    |   |       type_mat3x4.hpp
+    |   |       type_mat3x4.inl
+    |   |       type_mat4x2.hpp
+    |   |       type_mat4x2.inl
+    |   |       type_mat4x3.hpp
+    |   |       type_mat4x3.inl
+    |   |       type_mat4x4.hpp
+    |   |       type_mat4x4.inl
+    |   |       type_mat4x4_simd.inl
+    |   |       type_quat.hpp
+    |   |       type_quat.inl
+    |   |       type_quat_simd.inl
+    |   |       type_vec1.hpp
+    |   |       type_vec1.inl
+    |   |       type_vec2.hpp
+    |   |       type_vec2.inl
+    |   |       type_vec3.hpp
+    |   |       type_vec3.inl
+    |   |       type_vec4.hpp
+    |   |       type_vec4.inl
+    |   |       type_vec4_simd.inl
+    |   |       _features.hpp
+    |   |       _fixes.hpp
+    |   |       _noise.hpp
+    |   |       _swizzle.hpp
+    |   |       _swizzle_func.hpp
+    |   |       _vectorize.hpp
+    |   |       
+    |   +---ext
+    |   |       matrix_clip_space.hpp
+    |   |       matrix_clip_space.inl
+    |   |       matrix_common.hpp
+    |   |       matrix_common.inl
+    |   |       matrix_double2x2.hpp
+    |   |       matrix_double2x2_precision.hpp
+    |   |       matrix_double2x3.hpp
+    |   |       matrix_double2x3_precision.hpp
+    |   |       matrix_double2x4.hpp
+    |   |       matrix_double2x4_precision.hpp
+    |   |       matrix_double3x2.hpp
+    |   |       matrix_double3x2_precision.hpp
+    |   |       matrix_double3x3.hpp
+    |   |       matrix_double3x3_precision.hpp
+    |   |       matrix_double3x4.hpp
+    |   |       matrix_double3x4_precision.hpp
+    |   |       matrix_double4x2.hpp
+    |   |       matrix_double4x2_precision.hpp
+    |   |       matrix_double4x3.hpp
+    |   |       matrix_double4x3_precision.hpp
+    |   |       matrix_double4x4.hpp
+    |   |       matrix_double4x4_precision.hpp
+    |   |       matrix_float2x2.hpp
+    |   |       matrix_float2x2_precision.hpp
+    |   |       matrix_float2x3.hpp
+    |   |       matrix_float2x3_precision.hpp
+    |   |       matrix_float2x4.hpp
+    |   |       matrix_float2x4_precision.hpp
+    |   |       matrix_float3x2.hpp
+    |   |       matrix_float3x2_precision.hpp
+    |   |       matrix_float3x3.hpp
+    |   |       matrix_float3x3_precision.hpp
+    |   |       matrix_float3x4.hpp
+    |   |       matrix_float3x4_precision.hpp
+    |   |       matrix_float4x2.hpp
+    |   |       matrix_float4x2_precision.hpp
+    |   |       matrix_float4x3.hpp
+    |   |       matrix_float4x3_precision.hpp
+    |   |       matrix_float4x4.hpp
+    |   |       matrix_float4x4_precision.hpp
+    |   |       matrix_int2x2.hpp
+    |   |       matrix_int2x2_sized.hpp
+    |   |       matrix_int2x3.hpp
+    |   |       matrix_int2x3_sized.hpp
+    |   |       matrix_int2x4.hpp
+    |   |       matrix_int2x4_sized.hpp
+    |   |       matrix_int3x2.hpp
+    |   |       matrix_int3x2_sized.hpp
+    |   |       matrix_int3x3.hpp
+    |   |       matrix_int3x3_sized.hpp
+    |   |       matrix_int3x4.hpp
+    |   |       matrix_int3x4_sized.hpp
+    |   |       matrix_int4x2.hpp
+    |   |       matrix_int4x2_sized.hpp
+    |   |       matrix_int4x3.hpp
+    |   |       matrix_int4x3_sized.hpp
+    |   |       matrix_int4x4.hpp
+    |   |       matrix_int4x4_sized.hpp
+    |   |       matrix_integer.hpp
+    |   |       matrix_integer.inl
+    |   |       matrix_projection.hpp
+    |   |       matrix_projection.inl
+    |   |       matrix_relational.hpp
+    |   |       matrix_relational.inl
+    |   |       matrix_transform.hpp
+    |   |       matrix_transform.inl
+    |   |       matrix_uint2x2.hpp
+    |   |       matrix_uint2x2_sized.hpp
+    |   |       matrix_uint2x3.hpp
+    |   |       matrix_uint2x3_sized.hpp
+    |   |       matrix_uint2x4.hpp
+    |   |       matrix_uint2x4_sized.hpp
+    |   |       matrix_uint3x2.hpp
+    |   |       matrix_uint3x2_sized.hpp
+    |   |       matrix_uint3x3.hpp
+    |   |       matrix_uint3x3_sized.hpp
+    |   |       matrix_uint3x4.hpp
+    |   |       matrix_uint3x4_sized.hpp
+    |   |       matrix_uint4x2.hpp
+    |   |       matrix_uint4x2_sized.hpp
+    |   |       matrix_uint4x3.hpp
+    |   |       matrix_uint4x3_sized.hpp
+    |   |       matrix_uint4x4.hpp
+    |   |       matrix_uint4x4_sized.hpp
+    |   |       quaternion_common.hpp
+    |   |       quaternion_common.inl
+    |   |       quaternion_common_simd.inl
+    |   |       quaternion_double.hpp
+    |   |       quaternion_double_precision.hpp
+    |   |       quaternion_exponential.hpp
+    |   |       quaternion_exponential.inl
+    |   |       quaternion_float.hpp
+    |   |       quaternion_float_precision.hpp
+    |   |       quaternion_geometric.hpp
+    |   |       quaternion_geometric.inl
+    |   |       quaternion_relational.hpp
+    |   |       quaternion_relational.inl
+    |   |       quaternion_transform.hpp
+    |   |       quaternion_transform.inl
+    |   |       quaternion_trigonometric.hpp
+    |   |       quaternion_trigonometric.inl
+    |   |       scalar_common.hpp
+    |   |       scalar_common.inl
+    |   |       scalar_constants.hpp
+    |   |       scalar_constants.inl
+    |   |       scalar_integer.hpp
+    |   |       scalar_integer.inl
+    |   |       scalar_int_sized.hpp
+    |   |       scalar_packing.hpp
+    |   |       scalar_packing.inl
+    |   |       scalar_reciprocal.hpp
+    |   |       scalar_reciprocal.inl
+    |   |       scalar_relational.hpp
+    |   |       scalar_relational.inl
+    |   |       scalar_uint_sized.hpp
+    |   |       scalar_ulp.hpp
+    |   |       scalar_ulp.inl
+    |   |       vector_bool1.hpp
+    |   |       vector_bool1_precision.hpp
+    |   |       vector_bool2.hpp
+    |   |       vector_bool2_precision.hpp
+    |   |       vector_bool3.hpp
+    |   |       vector_bool3_precision.hpp
+    |   |       vector_bool4.hpp
+    |   |       vector_bool4_precision.hpp
+    |   |       vector_common.hpp
+    |   |       vector_common.inl
+    |   |       vector_double1.hpp
+    |   |       vector_double1_precision.hpp
+    |   |       vector_double2.hpp
+    |   |       vector_double2_precision.hpp
+    |   |       vector_double3.hpp
+    |   |       vector_double3_precision.hpp
+    |   |       vector_double4.hpp
+    |   |       vector_double4_precision.hpp
+    |   |       vector_float1.hpp
+    |   |       vector_float1_precision.hpp
+    |   |       vector_float2.hpp
+    |   |       vector_float2_precision.hpp
+    |   |       vector_float3.hpp
+    |   |       vector_float3_precision.hpp
+    |   |       vector_float4.hpp
+    |   |       vector_float4_precision.hpp
+    |   |       vector_int1.hpp
+    |   |       vector_int1_sized.hpp
+    |   |       vector_int2.hpp
+    |   |       vector_int2_sized.hpp
+    |   |       vector_int3.hpp
+    |   |       vector_int3_sized.hpp
+    |   |       vector_int4.hpp
+    |   |       vector_int4_sized.hpp
+    |   |       vector_integer.hpp
+    |   |       vector_integer.inl
+    |   |       vector_packing.hpp
+    |   |       vector_packing.inl
+    |   |       vector_reciprocal.hpp
+    |   |       vector_reciprocal.inl
+    |   |       vector_relational.hpp
+    |   |       vector_relational.inl
+    |   |       vector_uint1.hpp
+    |   |       vector_uint1_sized.hpp
+    |   |       vector_uint2.hpp
+    |   |       vector_uint2_sized.hpp
+    |   |       vector_uint3.hpp
+    |   |       vector_uint3_sized.hpp
+    |   |       vector_uint4.hpp
+    |   |       vector_uint4_sized.hpp
+    |   |       vector_ulp.hpp
+    |   |       vector_ulp.inl
+    |   |       _matrix_vectorize.hpp
+    |   |       
+    |   +---gtc
+    |   |       bitfield.hpp
+    |   |       bitfield.inl
+    |   |       color_space.hpp
+    |   |       color_space.inl
+    |   |       constants.hpp
+    |   |       constants.inl
+    |   |       epsilon.hpp
+    |   |       epsilon.inl
+    |   |       integer.hpp
+    |   |       integer.inl
+    |   |       matrix_access.hpp
+    |   |       matrix_access.inl
+    |   |       matrix_integer.hpp
+    |   |       matrix_inverse.hpp
+    |   |       matrix_inverse.inl
+    |   |       matrix_transform.hpp
+    |   |       matrix_transform.inl
+    |   |       noise.hpp
+    |   |       noise.inl
+    |   |       packing.hpp
+    |   |       packing.inl
+    |   |       quaternion.hpp
+    |   |       quaternion.inl
+    |   |       quaternion_simd.inl
+    |   |       random.hpp
+    |   |       random.inl
+    |   |       reciprocal.hpp
+    |   |       round.hpp
+    |   |       round.inl
+    |   |       type_aligned.hpp
+    |   |       type_precision.hpp
+    |   |       type_precision.inl
+    |   |       type_ptr.hpp
+    |   |       type_ptr.inl
+    |   |       ulp.hpp
+    |   |       ulp.inl
+    |   |       vec1.hpp
+    |   |       
+    |   +---gtx
+    |   |       associated_min_max.hpp
+    |   |       associated_min_max.inl
+    |   |       bit.hpp
+    |   |       bit.inl
+    |   |       closest_point.hpp
+    |   |       closest_point.inl
+    |   |       color_encoding.hpp
+    |   |       color_encoding.inl
+    |   |       color_space.hpp
+    |   |       color_space.inl
+    |   |       color_space_YCoCg.hpp
+    |   |       color_space_YCoCg.inl
+    |   |       common.hpp
+    |   |       common.inl
+    |   |       compatibility.hpp
+    |   |       compatibility.inl
+    |   |       component_wise.hpp
+    |   |       component_wise.inl
+    |   |       dual_quaternion.hpp
+    |   |       dual_quaternion.inl
+    |   |       easing.hpp
+    |   |       easing.inl
+    |   |       euler_angles.hpp
+    |   |       euler_angles.inl
+    |   |       extend.hpp
+    |   |       extend.inl
+    |   |       extended_min_max.hpp
+    |   |       extended_min_max.inl
+    |   |       exterior_product.hpp
+    |   |       exterior_product.inl
+    |   |       fast_exponential.hpp
+    |   |       fast_exponential.inl
+    |   |       fast_square_root.hpp
+    |   |       fast_square_root.inl
+    |   |       fast_trigonometry.hpp
+    |   |       fast_trigonometry.inl
+    |   |       float_notmalize.inl
+    |   |       functions.hpp
+    |   |       functions.inl
+    |   |       gradient_paint.hpp
+    |   |       gradient_paint.inl
+    |   |       handed_coordinate_space.hpp
+    |   |       handed_coordinate_space.inl
+    |   |       hash.hpp
+    |   |       hash.inl
+    |   |       integer.hpp
+    |   |       integer.inl
+    |   |       intersect.hpp
+    |   |       intersect.inl
+    |   |       io.hpp
+    |   |       io.inl
+    |   |       log_base.hpp
+    |   |       log_base.inl
+    |   |       matrix_cross_product.hpp
+    |   |       matrix_cross_product.inl
+    |   |       matrix_decompose.hpp
+    |   |       matrix_decompose.inl
+    |   |       matrix_factorisation.hpp
+    |   |       matrix_factorisation.inl
+    |   |       matrix_interpolation.hpp
+    |   |       matrix_interpolation.inl
+    |   |       matrix_major_storage.hpp
+    |   |       matrix_major_storage.inl
+    |   |       matrix_operation.hpp
+    |   |       matrix_operation.inl
+    |   |       matrix_query.hpp
+    |   |       matrix_query.inl
+    |   |       matrix_transform_2d.hpp
+    |   |       matrix_transform_2d.inl
+    |   |       mixed_product.hpp
+    |   |       mixed_product.inl
+    |   |       norm.hpp
+    |   |       norm.inl
+    |   |       normal.hpp
+    |   |       normal.inl
+    |   |       normalize_dot.hpp
+    |   |       normalize_dot.inl
+    |   |       number_precision.hpp
+    |   |       optimum_pow.hpp
+    |   |       optimum_pow.inl
+    |   |       orthonormalize.hpp
+    |   |       orthonormalize.inl
+    |   |       pca.hpp
+    |   |       pca.inl
+    |   |       perpendicular.hpp
+    |   |       perpendicular.inl
+    |   |       polar_coordinates.hpp
+    |   |       polar_coordinates.inl
+    |   |       projection.hpp
+    |   |       projection.inl
+    |   |       quaternion.hpp
+    |   |       quaternion.inl
+    |   |       range.hpp
+    |   |       raw_data.hpp
+    |   |       raw_data.inl
+    |   |       rotate_normalized_axis.hpp
+    |   |       rotate_normalized_axis.inl
+    |   |       rotate_vector.hpp
+    |   |       rotate_vector.inl
+    |   |       scalar_multiplication.hpp
+    |   |       scalar_relational.hpp
+    |   |       scalar_relational.inl
+    |   |       spline.hpp
+    |   |       spline.inl
+    |   |       std_based_type.hpp
+    |   |       std_based_type.inl
+    |   |       string_cast.hpp
+    |   |       string_cast.inl
+    |   |       texture.hpp
+    |   |       texture.inl
+    |   |       transform.hpp
+    |   |       transform.inl
+    |   |       transform2.hpp
+    |   |       transform2.inl
+    |   |       type_aligned.hpp
+    |   |       type_aligned.inl
+    |   |       type_trait.hpp
+    |   |       type_trait.inl
+    |   |       vector_angle.hpp
+    |   |       vector_angle.inl
+    |   |       vector_query.hpp
+    |   |       vector_query.inl
+    |   |       vec_swizzle.hpp
+    |   |       wrap.hpp
+    |   |       wrap.inl
+    |   |       
+    |   \---simd
+    |           common.h
+    |           exponential.h
+    |           geometric.h
+    |           integer.h
+    |           matrix.h
+    |           neon.h
+    |           packing.h
+    |           platform.h
+    |           trigonometric.h
+    |           vector_relational.h
+    |           
+    \---stb
+            stb_image.h
+            

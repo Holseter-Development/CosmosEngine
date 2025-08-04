@@ -1,32 +1,37 @@
+// src/engine/ui/TextRenderer.h
 #ifndef TEXT_RENDERER_H
 #define TEXT_RENDERER_H
 
 #include <map>
 #include <string>
+#include <glad/glad.h>
 #include <glm/glm.hpp>
 
 #include "../graphics/Shader.h"
 
+// Holds all state information relevant to a character as loaded using Freetype
 struct Character {
-    unsigned int TextureID;  // ID handle of the glyph texture
-    glm::ivec2 Size;         // Size of glyph
-    glm::ivec2 Bearing;      // Offset from baseline to left/top of glyph
-    unsigned int Advance;    // Offset to advance to next glyph
+    unsigned int TextureID; 
+    glm::ivec2   Size;      
+    glm::ivec2   Bearing;   
+    unsigned int Advance;   
 };
 
 class TextRenderer {
 public:
-    TextRenderer();
+    TextRenderer(unsigned int screenWidth, unsigned int screenHeight);
     ~TextRenderer();
+    bool Load(std::string font, unsigned int fontSize);
+    void RenderText(std::string text, float x, float y, float scale, glm::vec3 color = glm::vec3(1.0f));
+    void UpdateProjection(unsigned int screenWidth, unsigned int screenHeight);
 
-    bool Init(const char* fontPath, unsigned int fontSize, unsigned int screenWidth, unsigned int screenHeight);
-    void RenderText(const std::string& text, float x, float y, float scale, glm::vec3 color);
+    // FIX: Add a public method to safely get character info
+    glm::ivec2 GetCharacterSize(char character);
 
 private:
+    Shader TextShader;
     std::map<char, Character> Characters;
     unsigned int VAO, VBO;
-    Shader* m_Shader;
-    glm::mat4 m_Projection;
 };
 
 #endif

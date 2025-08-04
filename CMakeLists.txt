@@ -4,13 +4,14 @@ cmake_minimum_required(VERSION 3.10)
 # Define the project name
 project(LanderProject)
 
-find_package(Freetype REQUIRED)
-
 # Set the C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # --- Library Setup ---
+
+# Add the Freetype library by building it from the source in the vendor directory
+add_subdirectory(vendor/freetype)
 
 # --- GLFW (Manual Import) ---
 add_library(glfw_lib STATIC IMPORTED)
@@ -46,13 +47,15 @@ add_executable(Lander
 )
 
 # --- Linking and Includes ---
+# The FREETYPE_INCLUDE_DIRS variable is set automatically by add_subdirectory
 target_include_directories(Lander PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/vendor
     ${FREETYPE_INCLUDE_DIRS}
 )
 
 # Link all the necessary libraries
-target_link_libraries(Lander PRIVATE glad_lib glfw_lib opengl32 assimp_lib Freetype::Freetype)
+# The 'freetype' target is created automatically by add_subdirectory
+target_link_libraries(Lander PRIVATE glad_lib glfw_lib opengl32 assimp_lib freetype)
 
 # --- Linker options for hiding console ---
 if(MSVC)

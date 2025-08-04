@@ -16,7 +16,7 @@
 #include "engine/core/InputManager.h"
 #include "engine/graphics/TextureLoader.h"
 #include "engine/graphics/Model.h"
-#include "engine/graphics/Sphere.h" // Include our new Sphere class
+#include "engine/graphics/Sphere.h"
 #include "engine/ui/UIManager.h"
 #include "game/CommandModule.h"
 
@@ -31,7 +31,7 @@ int main() {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     glfwWindowHint(GLFW_SAMPLES, 4);
-    GLFWwindow* window = glfwCreateWindow(screenWidth, screenHeight, "Asteroid Lander", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(screenWidth, screenHeight, "Lander Mission Control", NULL, NULL);
     glfwMakeContextCurrent(window);
 
     // 2. Initialize GLAD
@@ -40,15 +40,16 @@ int main() {
         return -1;
     }
 
-    // 3. Initialize InputManager and Camera
+    // 3. Initialize Managers and Camera
     Camera camera(glm::vec3(0.0f, 0.0f, 0.0f), 5.0f);
-    InputManager::Init(window);
-    InputManager::SetCamera(&camera);
-
     CommandModule commandModule;
     UIManager uiManager;
-    uiManager.Init(screenWidth, screenHeight, &commandModule);
+
+    InputManager::Init(window);
+    InputManager::SetCamera(&camera);
     InputManager::SetUIManager(&uiManager);
+    
+    uiManager.Init(screenWidth, screenHeight, &commandModule);
 
     glEnable(GL_MULTISAMPLE);
     glEnable(GL_DEPTH_TEST);
@@ -62,7 +63,7 @@ int main() {
     Model ourModel("assets/models/commandmodule/ApolloLunarModule.glb");
 
     // 6. Create the Sun object
-    Sphere sunSphere(1.0f, 36, 18); // A sphere with radius 1
+    Sphere sunSphere(1.0f, 36, 18);
     unsigned int sunTexture = TextureLoader::loadTexture("assets/textures/sun.jpg");
     sunShader.use();
     sunShader.setInt("texture_diffuse1", 0);
@@ -96,12 +97,14 @@ int main() {
     skyboxShader.use();
     skyboxShader.setInt("skybox", 0);
 
-    // Light properties - moved further away
     glm::vec3 lightPos(0.0f, 5.0f, -20.0f);
 
     // 8. Game Loop
     while (!glfwWindowShouldClose(window)) {
         InputManager::ProcessInput(window);
+
+        // FIX: Update UI with dynamic data from the camera
+        uiManager.Update(camera);
 
         glClearColor(0.01f, 0.01f, 0.01f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -131,7 +134,7 @@ int main() {
         sunShader.setMat4("view", view);
         model = glm::mat4(1.0f);
         model = glm::translate(model, lightPos);
-        model = glm::scale(model, glm::vec3(2.0f)); // Made it larger
+        model = glm::scale(model, glm::vec3(2.0f));
         sunShader.setMat4("model", model);
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, sunTexture);

@@ -1,3 +1,4 @@
+// src/engine/graphics/Camera.h
 #ifndef CAMERA_H
 #define CAMERA_H
 
@@ -6,11 +7,17 @@
 
 class Camera {
 public:
+    // Camera Attributes
     glm::vec3 Position;
+    glm::vec3 Front; // FIX: This was missing
     glm::vec3 Target;
+
+    // Orbit Controls
     float Radius;
     float Yaw;
     float Pitch;
+    
+    // Camera options
     float MouseSensitivity;
 
     // Constructor for an orbiting camera
